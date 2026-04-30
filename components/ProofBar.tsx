@@ -5,7 +5,6 @@ const ease = [0.22, 1, 0.36, 1] as const
 
 const stats = [
   { num: '99+', label: 'Deals Closed' },
-  { num: '$1.85M+', label: 'In Assignment Fees' },
   { num: '24hr', label: 'Offer Turnaround' },
   { num: '$0', label: 'Fees or Commissions' },
 ]

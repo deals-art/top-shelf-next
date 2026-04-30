@@ -17,11 +17,7 @@ export default function Navbar() {
     <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
       <div className="nav-inner">
         <a href="#" className="logo" aria-label="Top Shelf Acquisitions">
-          <span className="logo-wordmark">
-            <span className="logo-script">Top Shelf</span>
-            <span className="logo-rule" aria-hidden="true" />
-            <span className="logo-sub">Acquisitions</span>
-          </span>
+          <img src="/logo-script.png" alt="Top Shelf Acquisitions" className="logo-img" />
         </a>
         <ul className="nav-links">
           <li><a href="#about">About</a></li>

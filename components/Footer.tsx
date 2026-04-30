@@ -3,9 +3,7 @@ export default function Footer() {
     <footer>
       <div className="footer-inner">
         <div className="footer-logo">
-          <span className="footer-logo-script">Top Shelf</span>
-          <span className="footer-logo-rule" aria-hidden="true" />
-          <span className="footer-logo-sub">Acquisitions</span>
+          <img src="/logo-script.png" alt="Top Shelf Acquisitions" className="footer-logo-img" />
         </div>
         <p className="footer-tagline">Tampa Bay Real Estate Investments</p>
         <p className="footer-copy">&copy; 2026 Top Shelf Acquisitions. All rights reserved.</p>
