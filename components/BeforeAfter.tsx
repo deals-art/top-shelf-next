@@ -29,7 +29,6 @@ export default function BeforeAfter() {
         >
           <p className="section-eyebrow">Our Work</p>
           <h2>From Distressed to Delivered.</h2>
-          <p className="ba-subhead">79th Avenue North — a complete top-to-bottom transformation. Nine rooms, fully reimagined.</p>
         </motion.div>
 
         <div className="ba-rooms">
