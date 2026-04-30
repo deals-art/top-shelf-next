@@ -1,4 +1,5 @@
 'use client'
+import { Fragment } from 'react'
 import { motion } from 'framer-motion'
 
 const ease = [0.22, 1, 0.36, 1] as const
@@ -38,9 +39,8 @@ export default function HowItWorks() {
 
         <div className="steps">
           {steps.map((step, i) => (
-            <>
+            <Fragment key={step.num}>
               <motion.div
-                key={step.num}
                 className="step"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -52,9 +52,9 @@ export default function HowItWorks() {
                 <p>{step.body}</p>
               </motion.div>
               {i < steps.length - 1 && (
-                <div key={`arrow-${i}`} className="step-arrow">→</div>
+                <div className="step-arrow">→</div>
               )}
-            </>
+            </Fragment>
           ))}
         </div>
       </div>
