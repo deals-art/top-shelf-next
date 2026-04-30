@@ -64,20 +64,6 @@ export default function DealMap({ onCountReady }: { onCountReady: (n: number) =>
     })
 
     onCountReady(TOTAL_DEALS)
-
-    const portfolioSection = document.getElementById('portfolio')
-    if (!portfolioSection) return
-    let animated = false
-    const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting && !animated) {
-        animated = true
-        document.querySelectorAll<HTMLElement>('.map-pin').forEach(el => {
-          el.style.animationPlayState = 'running'
-        })
-      }
-    }, { threshold: 0.15 })
-    observer.observe(portfolioSection)
-    return () => observer.disconnect()
   }, [onCountReady])
 
   return <div ref={containerRef} id="deal-map" />
