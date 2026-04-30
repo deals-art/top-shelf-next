@@ -89,9 +89,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 h2 {
   font-family: var(--font-display);
   font-size: clamp(32px, 4vw, 52px);
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.08;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.5px;
 }
 h3 {
   font-family: var(--font-sans);
@@ -221,9 +221,9 @@ h3 {
 .hero-content h1 {
   font-family: var(--font-display);
   font-size: clamp(42px, 5.5vw, 72px);
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.08;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: 24px;
 }
 .hero-sub {
