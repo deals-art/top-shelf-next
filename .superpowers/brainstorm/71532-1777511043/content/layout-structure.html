@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout Structure Options</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d0d0d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #fff; padding: 40px 24px 80px; }
+
+  h1 { text-align: center; font-size: 22px; margin-bottom: 8px; }
+  .sub { text-align: center; color: #666; font-size: 13px; margin-bottom: 48px; }
+
+  .layouts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+
+  .layout-card {
+    background: #111;
+    border: 2px solid #222;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .layout-card:hover { border-color: #5DD6DB; transform: translateY(-3px); }
+  .layout-card.selected { border-color: #5DD6DB; }
+  .layout-card.selected .card-label { background: #5DD6DB; color: #000; }
+
+  .card-label {
+    padding: 10px 16px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: #1a1a1a;
+    color: #5DD6DB;
+    border-bottom: 1px solid #222;
+  }
+
+  .wireframe { padding: 16px; display: flex; flex-direction: column; gap: 5px; }
+
+  /* Wireframe blocks */
+  .w-nav { height: 20px; background: #1a1a2e; border-radius: 3px; display: flex; align-items: center; padding: 0 8px; gap: 4px; }
+  .w-nav .dot { width: 20px; height: 5px; background: #5DD6DB; border-radius: 2px; }
+  .w-nav .links { display: flex; gap: 4px; margin-left: auto; }
+  .w-nav .links span { width: 20px; height: 4px; background: #333; border-radius: 2px; }
+
+  .w-block { border-radius: 3px; display: flex; flex-direction: column; justify-content: center; padding: 8px; position: relative; overflow: hidden; }
+  .w-block .lines { display: flex; flex-direction: column; gap: 3px; }
+  .w-block .line { height: 4px; background: rgba(255,255,255,0.15); border-radius: 2px; }
+  .w-block .line.teal { background: rgba(93,214,219,0.4); }
+  .w-block .line.short { width: 50%; }
+  .w-block .line.medium { width: 70%; }
+  .w-block .line.tiny { width: 30%; height: 3px; }
+  .w-block .btn-mock { height: 10px; width: 60px; background: #5DD6DB; border-radius: 2px; margin-top: 5px; }
+  .w-block .btn-mock-ghost { height: 10px; width: 60px; border: 1px solid #5DD6DB; border-radius: 2px; margin-top: 5px; }
+
+  .hero-tall { height: 110px; background: linear-gradient(135deg, #0B1628 0%, #0f2040 100%); }
+  .hero-split { height: 110px; background: #0B1628; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 5px; }
+  .hero-split .left { background: linear-gradient(135deg, #0B1628, #0f2040); padding: 8px; }
+  .hero-split .right { background: rgba(93,214,219,0.05); border: 1px solid rgba(93,214,219,0.1); border-radius: 3px; padding: 8px; }
+  .hero-cinematic { height: 110px; background: linear-gradient(160deg, #060d1a 0%, #0B1628 60%, #0f2040 100%); position: relative; }
+  .hero-cinematic::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #5DD6DB, transparent); }
+
+  .proof-strip { height: 28px; background: rgba(93,214,219,0.08); border: 1px solid rgba(93,214,219,0.12); display: flex; align-items: center; justify-content: space-around; padding: 0 8px; border-radius: 3px; }
+  .proof-strip span { height: 5px; width: 30px; background: rgba(93,214,219,0.3); border-radius: 2px; }
+
+  .two-col { height: 70px; display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+  .two-col-alt { height: 70px; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 5px; }
+  .three-col { height: 60px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; }
+  .col-block { background: rgba(93,214,219,0.04); border: 1px solid rgba(93,214,219,0.1); border-radius: 3px; padding: 6px; }
+
+  .full-dark { background: rgba(5,10,20,0.8); border-radius: 3px; padding: 8px; }
+  .full-mid { background: rgba(15,25,45,0.8); border-radius: 3px; padding: 8px; }
+  .map-block { height: 80px; background: #060e1c; border: 1px solid rgba(93,214,219,0.15); border-radius: 3px; position: relative; overflow: hidden; }
+  .map-block::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(93,214,219,0.02) 8px, rgba(93,214,219,0.02) 9px); }
+  .map-dot { position: absolute; width: 5px; height: 5px; background: #5DD6DB; border-radius: 50%; }
+
+  .contact-split { height: 70px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 5px; }
+  .footer-bar { height: 20px; background: #060d1a; border-radius: 3px; }
+
+  .section-tag { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: #5DD6DB; opacity: 0.6; margin-bottom: 3px; }
+
+  .card-desc { padding: 14px 16px; border-top: 1px solid #1a1a1a; }
+  .card-desc h3 { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .card-desc p { font-size: 11px; color: #666; line-height: 1.5; }
+  .card-desc ul { margin-top: 6px; padding-left: 14px; }
+  .card-desc ul li { font-size: 10px; color: #555; margin-bottom: 2px; }
+</style>
+</head>
+<body>
+
+<h1>How should the page be structured?</h1>
+<p class="sub">Click a layout to select it — each shows a full page wireframe of all sections in order</p>
+
+<div class="layouts">
+
+  <!-- LAYOUT 1: CLEAN AUTHORITY -->
+  <div class="layout-card" id="lay-a" onclick="pick('a')">
+    <div class="card-label">Layout A — Clean Authority</div>
+    <div class="wireframe">
+      <div class="w-nav"><div class="dot"></div><div class="links"><span></span><span></span><span></span></div></div>
+
+      <div class="w-block hero-tall">
+        <div class="lines" style="padding:8px">
+          <div class="section-tag">Tampa Bay, Florida</div>
+          <div class="line teal short"></div>
+          <div class="line medium"></div>
+          <div class="line short"></div>
+          <div style="display:flex;gap:4px;margin-top:5px"><div class="btn-mock"></div><div class="btn-mock-ghost"></div></div>
+        </div>
+      </div>
+
+      <div class="proof-strip"><span></span><span></span><span></span><span></span></div>
+
+      <div class="w-block two-col">
+        <div class="col-block"><div class="section-tag">About</div><div class="lines"><div class="line medium"></div><div class="line short"></div><div class="line tiny"></div></div></div>
+        <div class="col-block"><div class="lines"><div class="line"></div><div class="line medium"></div></div></div>
+      </div>
+
+      <div class="w-block three-col">
+        <div class="col-block"><div class="section-tag">SFR</div></div>
+        <div class="col-block"><div class="section-tag">Land</div></div>
+        <div class="col-block"><div class="section-tag">+</div></div>
+      </div>
+
+      <div class="w-block full-dark" style="height:50px">
+        <div class="section-tag">How It Works — 3 Steps</div>
+        <div style="display:flex;gap:5px;margin-top:4px">
+          <div style="flex:1;height:18px;background:rgba(93,214,219,0.08);border-radius:2px;border:1px solid rgba(93,214,219,0.1)"></div>
+          <div style="flex:1;height:18px;background:rgba(93,214,219,0.08);border-radius:2px;border:1px solid rgba(93,214,219,0.1)"></div>
+          <div style="flex:1;height:18px;background:rgba(93,214,219,0.08);border-radius:2px;border:1px solid rgba(93,214,219,0.1)"></div>
+        </div>
+      </div>
+
+      <div class="map-block">
+        <div class="map-dot" style="top:30%;left:40%"></div>
+        <div class="map-dot" style="top:50%;left:55%"></div>
+        <div class="map-dot" style="top:40%;left:45%"></div>
+        <div class="map-dot" style="top:60%;left:35%"></div>
+        <div class="map-dot" style="top:45%;left:60%"></div>
+      </div>
+
+      <div class="w-block contact-split">
+        <div class="col-block"><div class="section-tag">Contact Info</div></div>
+        <div class="col-block"><div class="section-tag">Form</div></div>
+      </div>
+
+      <div class="footer-bar"></div>
+    </div>
+    <div class="card-desc">
+      <h3>Clean Authority</h3>
+      <p>Traditional top-to-bottom flow, well-spaced sections. Professional and easy to navigate.</p>
+      <ul>
+        <li>Nav → Hero → Stats strip → About → What We Buy</li>
+        <li>How It Works → Map → Contact → Footer</li>
+        <li>Same sections as current, much better spacing & hierarchy</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LAYOUT 2: BOLD EDITORIAL -->
+  <div class="layout-card" id="lay-b" onclick="pick('b')">
+    <div class="card-label">Layout B — Bold Editorial</div>
+    <div class="wireframe">
+      <div class="w-nav"><div class="dot"></div><div class="links"><span></span><span></span><span></span></div></div>
+
+      <div class="w-block hero-split">
+        <div class="left">
+          <div class="section-tag">Hero</div>
+          <div class="lines"><div class="line teal short"></div><div class="line medium"></div><div class="line short"></div><div style="display:flex;gap:3px;margin-top:5px"><div class="btn-mock"></div></div></div>
+        </div>
+        <div class="right">
+          <div class="section-tag">Features</div>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="height:14px;background:rgba(93,214,219,0.08);border-radius:2px;border:1px solid rgba(93,214,219,0.12)"></div>
+            <div style="height:14px;background:rgba(93,214,219,0.08);border-radius:2px;border:1px solid rgba(93,214,219,0.12)"></div>
+            <div style="height:14px;background:rgba(93,214,219,0.08);border-radius:2px;border:1px solid rgba(93,214,219,0.12)"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proof-strip"><span></span><span></span><span></span><span></span></div>
+
+      <div class="w-block full-mid" style="height:60px">
+        <div class="section-tag">About — Full Width Statement</div>
+        <div class="lines"><div class="line teal medium"></div><div class="line short"></div></div>
+      </div>
+
+      <div class="w-block two-col-alt">
+        <div class="col-block" style="background:rgba(93,214,219,0.06)"><div class="section-tag">SFR Card</div></div>
+        <div class="col-block"><div class="section-tag">Land Card</div></div>
+      </div>
+
+      <div class="w-block full-dark" style="height:40px">
+        <div class="section-tag">Process — Horizontal Timeline</div>
+      </div>
+
+      <div class="w-block two-col">
+        <div class="col-block"><div class="section-tag">Map Stats</div><div class="map-dot" style="position:relative;top:auto;left:auto;margin-top:5px"></div></div>
+        <div class="map-block" style="height:auto"></div>
+      </div>
+
+      <div class="w-block contact-split">
+        <div class="col-block"><div class="section-tag">CTA Text</div></div>
+        <div class="col-block"><div class="section-tag">Form</div></div>
+      </div>
+
+      <div class="footer-bar"></div>
+    </div>
+    <div class="card-desc">
+      <h3>Bold Editorial</h3>
+      <p>Split hero with feature cards. Asymmetric layouts alternate through the page — modern and distinctive.</p>
+      <ul>
+        <li>Split hero (text left, cards right)</li>
+        <li>Bold full-width statement section</li>
+        <li>Asymmetric what-we-buy cards</li>
+        <li>Side-by-side map + stats</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LAYOUT 3: CONVERSION MACHINE -->
+  <div class="layout-card" id="lay-c" onclick="pick('c')">
+    <div class="card-label">Layout C — Conversion Machine</div>
+    <div class="wireframe">
+      <div class="w-nav"><div class="dot"></div><div class="links"><span></span><span></span><span></span></div></div>
+
+      <div class="w-block hero-cinematic">
+        <div class="lines" style="padding:8px;text-align:center">
+          <div class="section-tag" style="text-align:center">Big Headline</div>
+          <div class="line teal" style="width:60%;margin:3px auto"></div>
+          <div class="line" style="width:70%;margin:3px auto"></div>
+          <div style="display:flex;gap:4px;margin-top:5px;justify-content:center"><div class="btn-mock"></div><div class="btn-mock-ghost"></div></div>
+        </div>
+      </div>
+
+      <div class="proof-strip"><span></span><span></span><span></span><span></span></div>
+
+      <div class="w-block three-col">
+        <div class="col-block"><div class="section-tag">Homes</div></div>
+        <div class="col-block" style="background:rgba(93,214,219,0.1);border-color:rgba(93,214,219,0.3)"><div class="section-tag" style="opacity:1">Land</div></div>
+        <div class="col-block"><div class="section-tag">Fast</div></div>
+      </div>
+
+      <div class="w-block full-dark" style="height:50px">
+        <div class="section-tag">Why Top Shelf — 4 Trust Points</div>
+        <div style="display:flex;gap:5px;margin-top:4px">
+          <div style="flex:1;height:18px;background:rgba(93,214,219,0.06);border-radius:2px"></div>
+          <div style="flex:1;height:18px;background:rgba(93,214,219,0.06);border-radius:2px"></div>
+          <div style="flex:1;height:18px;background:rgba(93,214,219,0.06);border-radius:2px"></div>
+          <div style="flex:1;height:18px;background:rgba(93,214,219,0.06);border-radius:2px"></div>
+        </div>
+      </div>
+
+      <div class="w-block full-mid" style="height:35px">
+        <div class="section-tag">Process — 3 Steps (compact)</div>
+      </div>
+
+      <div class="map-block" style="height:70px">
+        <div class="map-dot" style="top:30%;left:40%"></div>
+        <div class="map-dot" style="top:50%;left:55%"></div>
+        <div class="map-dot" style="top:40%;left:45%"></div>
+      </div>
+
+      <div class="w-block full-dark" style="height:50px;text-align:center">
+        <div class="section-tag" style="text-align:center">Big CTA Banner</div>
+        <div style="display:flex;justify-content:center;margin-top:5px"><div class="btn-mock" style="width:80px"></div></div>
+      </div>
+
+      <div class="w-block contact-split">
+        <div class="col-block"><div class="section-tag">Contact</div></div>
+        <div class="col-block"><div class="section-tag">Form</div></div>
+      </div>
+
+      <div class="footer-bar"></div>
+    </div>
+    <div class="card-desc">
+      <h3>Conversion Machine</h3>
+      <p>Every section drives toward one action: get the offer. Adds a "Why Us" trust section and a bold mid-page CTA banner.</p>
+      <ul>
+        <li>Centered cinematic hero</li>
+        <li>What We Buy as 3 prominent cards</li>
+        <li>NEW: "Why Top Shelf" — 4 trust pillars</li>
+        <li>Bold full-width CTA banner before contact</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<p style="text-align:center;color:#555;font-size:12px;margin-top:32px">Click to select. Or describe what you want from each — we can combine them.</p>
+
+<script>
+let sel = null;
+function pick(c) {
+  ['a','b','c'].forEach(x => document.getElementById('lay-'+x).classList.remove('selected'));
+  sel = c;
+  document.getElementById('lay-'+c).classList.add('selected');
+  if (window.__sp_recordEvent) window.__sp_recordEvent({type:'click', choice:c, text:'Layout '+c.toUpperCase()});
+}
+</script>
+</body>
+</html>

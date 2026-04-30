@@ -1,0 +1,4 @@
+{"type":"server-started","port":54321,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:54321","screen_dir":"/Users/seancastro/top-shelf-next/.superpowers/brainstorm/71532-1777511043/content","state_dir":"/Users/seancastro/top-shelf-next/.superpowers/brainstorm/71532-1777511043/state"}
+{"type":"screen-added","file":"/Users/seancastro/top-shelf-next/.superpowers/brainstorm/71532-1777511043/content/design-examples.html"}
+{"type":"screen-added","file":"/Users/seancastro/top-shelf-next/.superpowers/brainstorm/71532-1777511043/content/layout-structure.html"}
+{"type":"server-stopped","reason":"idle timeout"}

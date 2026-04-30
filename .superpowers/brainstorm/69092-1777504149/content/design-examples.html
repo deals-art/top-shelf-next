@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Directions — Top Shelf Acquisitions</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #111; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #fff; }
+
+  .page-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    color: #aaa;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .page-header h1 { color: #fff; font-size: 22px; margin-bottom: 8px; letter-spacing: 0; text-transform: none; }
+
+  .direction-label {
+    text-align: center;
+    padding: 30px 20px 10px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #666;
+  }
+  .direction-label span { color: #fff; font-size: 16px; font-weight: 700; display: block; margin-top: 4px; letter-spacing: 0; text-transform: none; }
+
+  .preview-frame {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid transparent;
+    position: relative;
+  }
+  .preview-frame:hover { transform: translateY(-4px); box-shadow: 0 40px 100px rgba(0,0,0,0.8); }
+  .preview-frame.selected { border-color: #5DD6DB; }
+  .preview-frame.selected::after {
+    content: '✓ Selected';
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #5DD6DB;
+    color: #000;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+  }
+
+  .pick-btn {
+    display: block;
+    margin: 12px auto 0;
+    padding: 10px 32px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    transition: background 0.2s;
+  }
+  .pick-btn:hover { background: rgba(255,255,255,0.15); }
+
+  /* ========== A: DARK LUXURY ========== */
+  .luxury { background: #080808; }
+  .luxury nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 48px; border-bottom: 1px solid #1a1a1a; }
+  .luxury nav .logo-text { color: #c9a84c; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
+  .luxury nav .nav-links { display: flex; gap: 32px; }
+  .luxury nav .nav-links a { color: #666; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
+  .luxury nav .nav-cta { background: #c9a84c; color: #000 !important; padding: 8px 20px; font-size: 11px; font-weight: 700; }
+  .luxury .hero { padding: 80px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; min-height: 420px; position: relative; overflow: hidden; }
+  .luxury .hero::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; border: 1px solid rgba(201,168,76,0.1); border-radius: 50%; }
+  .luxury .hero::after { content: ''; position: absolute; top: -50px; right: -50px; width: 250px; height: 250px; border: 1px solid rgba(201,168,76,0.08); border-radius: 50%; }
+  .luxury .eyebrow { color: #c9a84c; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 20px; }
+  .luxury .hero h1 { font-size: 42px; font-weight: 800; line-height: 1.05; margin-bottom: 20px; }
+  .luxury .hero h1 span { color: #c9a84c; }
+  .luxury .hero p { color: #666; font-size: 14px; line-height: 1.7; margin-bottom: 32px; }
+  .luxury .btns { display: flex; gap: 12px; }
+  .luxury .btn-gold { background: linear-gradient(90deg, #c9a84c, #f0d080); color: #000; padding: 12px 28px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+  .luxury .btn-ghost { border: 1px solid #333; color: #666; padding: 12px 28px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+  .luxury .stats-right { display: flex; flex-direction: column; gap: 24px; }
+  .luxury .stat-box { border: 1px solid #1a1a1a; padding: 28px; }
+  .luxury .stat-box .num { color: #c9a84c; font-size: 36px; font-weight: 800; }
+  .luxury .stat-box .lbl { color: #444; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+  .luxury .bar { background: #111; padding: 24px 48px; display: flex; gap: 48px; border-top: 1px solid #1a1a1a; }
+  .luxury .bar-item { color: #333; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+  .luxury .bar-item span { color: #c9a84c; display: block; font-size: 20px; font-weight: 700; letter-spacing: 0; margin-bottom: 4px; }
+
+  /* ========== B: BOLD CONVERSION ========== */
+  .bold { background: #fff; color: #111; }
+  .bold nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 48px; background: #1a1a2e; }
+  .bold nav .logo-text { color: #fff; font-size: 14px; font-weight: 900; letter-spacing: 2px; }
+  .bold nav .nav-links { display: flex; gap: 28px; }
+  .bold nav .nav-links a { color: rgba(255,255,255,0.6); font-size: 12px; text-decoration: none; }
+  .bold nav .nav-cta { background: #e63946; color: #fff !important; padding: 8px 20px; font-size: 11px; font-weight: 800; }
+  .bold .hero { padding: 0; display: grid; grid-template-columns: 1.1fr 0.9fr; min-height: 380px; }
+  .bold .hero-left { background: #1a1a2e; padding: 56px 48px; }
+  .bold .hero-right { background: #e63946; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+  .bold .eyebrow { background: #e63946; color: #fff; display: inline-block; padding: 4px 12px; font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
+  .bold .hero h1 { font-size: 38px; font-weight: 900; line-height: 1.05; margin-bottom: 16px; color: #fff; }
+  .bold .hero h1 span { color: #e63946; }
+  .bold .hero p { color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.6; margin-bottom: 28px; }
+  .bold .btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .bold .btn-red { background: #e63946; color: #fff; padding: 14px 28px; font-size: 12px; font-weight: 800; letter-spacing: 1px; }
+  .bold .btn-outline { border: 2px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); padding: 14px 24px; font-size: 12px; font-weight: 600; }
+  .bold .proof { display: flex; flex-direction: column; gap: 16px; }
+  .bold .proof-item { background: rgba(0,0,0,0.15); padding: 16px 20px; }
+  .bold .proof-item .big { font-size: 32px; font-weight: 900; color: #fff; }
+  .bold .proof-item .sm { font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+  .bold .trust-bar { background: #f8f9fa; padding: 20px 48px; display: flex; gap: 32px; align-items: center; border-top: 3px solid #e63946; }
+  .bold .trust-item { font-size: 12px; color: #333; font-weight: 600; }
+  .bold .trust-item::before { content: '✓ '; color: #e63946; font-weight: 900; }
+
+  /* ========== C: UPGRADED CURRENT ========== */
+  .current { background: #0B1628; }
+  .current nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; }
+  .current nav .logo-text { color: #fff; font-size: 14px; font-weight: 800; }
+  .current nav .nav-links { display: flex; gap: 32px; }
+  .current nav .nav-links a { color: rgba(255,255,255,0.5); font-size: 12px; text-decoration: none; }
+  .current nav .nav-cta { background: linear-gradient(90deg,#5DD6DB,#3db8bd); color: #0B1628; padding: 8px 20px; font-size: 11px; font-weight: 800; border-radius: 6px; }
+  .current .hero { padding: 60px 48px 40px; position: relative; overflow: hidden; }
+  .current .hero-orb { position: absolute; top: -60px; right: -60px; width: 400px; height: 400px; background: radial-gradient(circle,rgba(93,214,219,0.12) 0%,transparent 70%); pointer-events: none; }
+  .current .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(93,214,219,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(93,214,219,0.03) 1px,transparent 1px); background-size: 40px 40px; pointer-events: none; }
+  .current .hero-inner { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; position: relative; }
+  .current .eyebrow { color: #5DD6DB; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .current .eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: #5DD6DB; }
+  .current .hero h1 { font-size: 44px; font-weight: 900; line-height: 1.05; margin-bottom: 20px; }
+  .current .hero h1 span { color: #5DD6DB; }
+  .current .hero p { color: rgba(255,255,255,0.55); font-size: 14px; line-height: 1.7; margin-bottom: 32px; max-width: 460px; }
+  .current .btns { display: flex; gap: 12px; }
+  .current .btn-teal { background: linear-gradient(90deg,#5DD6DB,#3db8bd); color: #0B1628; padding: 13px 28px; font-size: 12px; font-weight: 800; border-radius: 8px; }
+  .current .btn-ghost { border: 1px solid rgba(93,214,219,0.25); color: #5DD6DB; padding: 13px 24px; font-size: 12px; border-radius: 8px; }
+  .current .cards-right { display: flex; flex-direction: column; gap: 12px; }
+  .current .feat-card { background: rgba(93,214,219,0.05); border: 1px solid rgba(93,214,219,0.15); border-radius: 12px; padding: 20px 24px; }
+  .current .feat-card .icon { font-size: 22px; margin-bottom: 8px; }
+  .current .feat-card h3 { color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .current .feat-card p { color: rgba(255,255,255,0.45); font-size: 11px; line-height: 1.5; }
+  .current .stats-bar { display: flex; gap: 0; border-top: 1px solid rgba(93,214,219,0.1); margin-top: 40px; }
+  .current .stat { flex: 1; padding: 24px 32px; border-right: 1px solid rgba(93,214,219,0.1); }
+  .current .stat:last-child { border-right: none; }
+  .current .stat .num { color: #5DD6DB; font-size: 28px; font-weight: 800; }
+  .current .stat .lbl { color: rgba(255,255,255,0.4); font-size: 11px; margin-top: 2px; }
+
+  /* ========== D: DARK TECH ========== */
+  .tech { background: #0a0b0d; }
+  .tech nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; border-bottom: 1px solid #0f1a0f; }
+  .tech nav .logo-text { color: #00ff88; font-size: 13px; font-weight: 900; letter-spacing: 2px; font-family: 'Courier New', monospace; }
+  .tech nav .nav-links { display: flex; gap: 32px; }
+  .tech nav .nav-links a { color: #444; font-size: 12px; text-decoration: none; font-family: 'Courier New', monospace; }
+  .tech nav .nav-cta { border: 1px solid #00ff88; color: #00ff88; padding: 7px 18px; font-size: 11px; font-family: 'Courier New', monospace; }
+  .tech .hero { padding: 60px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; min-height: 380px; position: relative; overflow: hidden; }
+  .tech .scanlines { position: absolute; inset: 0; background: repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,136,0.015) 2px,rgba(0,255,136,0.015) 4px); pointer-events: none; }
+  .tech .eyebrow { color: #00ff88; font-size: 10px; letter-spacing: 3px; font-family: 'Courier New', monospace; margin-bottom: 16px; }
+  .tech .eyebrow span { color: #333; }
+  .tech .hero h1 { font-size: 40px; font-weight: 900; line-height: 1.05; margin-bottom: 20px; }
+  .tech .hero h1 span { color: #00ff88; }
+  .tech .hero p { color: #444; font-size: 14px; line-height: 1.7; margin-bottom: 32px; font-family: 'Courier New', monospace; }
+  .tech .btns { display: flex; gap: 12px; }
+  .tech .btn-green { background: #00ff88; color: #000; padding: 13px 28px; font-size: 12px; font-weight: 900; letter-spacing: 1px; }
+  .tech .btn-ghost { border: 1px solid #1a2e1a; color: #333; padding: 13px 24px; font-size: 12px; font-family: 'Courier New', monospace; }
+  .tech .terminal { background: #0d1117; border: 1px solid #00ff8833; border-radius: 8px; padding: 20px; font-family: 'Courier New', monospace; }
+  .tech .terminal .t-header { color: #333; font-size: 10px; margin-bottom: 16px; border-bottom: 1px solid #0f1a0f; padding-bottom: 10px; }
+  .tech .terminal .t-line { font-size: 12px; margin-bottom: 8px; }
+  .tech .terminal .t-line .prompt { color: #00ff88; }
+  .tech .terminal .t-line .val { color: #fff; }
+  .tech .terminal .t-line .key { color: #555; }
+  .tech .data-bar { display: flex; gap: 0; margin-top: 40px; border: 1px solid #0f1a0f; }
+  .tech .data-item { flex: 1; padding: 20px; border-right: 1px solid #0f1a0f; }
+  .tech .data-item:last-child { border-right: none; }
+  .tech .data-item .num { color: #00ff88; font-size: 24px; font-weight: 900; font-family: 'Courier New', monospace; }
+  .tech .data-item .lbl { color: #333; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+
+  .footer-note { text-align: center; padding: 40px; color: #444; font-size: 12px; }
+  .select-bar {
+    position: sticky; bottom: 0; background: rgba(17,17,17,0.95);
+    backdrop-filter: blur(10px); padding: 16px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid #222; z-index: 100;
+  }
+  .select-bar p { color: #666; font-size: 12px; }
+  .select-bar .selected-text { color: #5DD6DB; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Top Shelf Acquisitions — Design Directions</h1>
+  Click any direction to select it, then tell me which one you want to build.
+</div>
+
+<!-- DIRECTION A: DARK LUXURY -->
+<div class="direction-label">Direction A <span>Dark Luxury — Black + Gold</span></div>
+<div class="preview-frame" id="frame-a" onclick="select('a')">
+  <div class="luxury">
+    <nav>
+      <div class="logo-text">TOP SHELF ACQUISITIONS</div>
+      <div class="nav-links">
+        <a href="#">About</a>
+        <a href="#">What We Buy</a>
+        <a href="#">Portfolio</a>
+        <a href="#" class="nav-cta">Get An Offer</a>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="hero-left">
+        <div class="eyebrow">Tampa Bay, Florida</div>
+        <h1>We Acquire <span>Premium Real Estate</span> With Precision.</h1>
+        <p>Top Shelf Acquisitions is a private real estate investment firm specializing in value-add single family homes and vacant land across the greater Tampa Bay market. Discreet. Direct. Done right.</p>
+        <div class="btns">
+          <div class="btn-gold">Request an Offer</div>
+          <div class="btn-ghost">View Portfolio</div>
+        </div>
+      </div>
+      <div class="stats-right">
+        <div class="stat-box">
+          <div class="num">96+</div>
+          <div class="lbl">Closed Transactions</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">24hr</div>
+          <div class="lbl">Offer Turnaround</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">$0</div>
+          <div class="lbl">Fees or Commissions</div>
+        </div>
+      </div>
+    </div>
+    <div class="bar">
+      <div class="bar-item"><span>SFR</span>Single Family</div>
+      <div class="bar-item"><span>Land</span>Vacant Lots</div>
+      <div class="bar-item"><span>Cash</span>All-Cash Offers</div>
+      <div class="bar-item"><span>Fast</span>Close On Your Timeline</div>
+    </div>
+  </div>
+</div>
+
+<!-- DIRECTION B: BOLD CONVERSION -->
+<div class="direction-label">Direction B <span>Bold & Conversion — Navy + Red</span></div>
+<div class="preview-frame" id="frame-b" onclick="select('b')">
+  <div class="bold">
+    <nav>
+      <div class="logo-text">TOP SHELF</div>
+      <div class="nav-links">
+        <a href="#">About</a>
+        <a href="#">What We Buy</a>
+        <a href="#">96 Deals Closed</a>
+        <a href="#" class="nav-cta">Sell Now →</a>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="hero-left">
+        <div class="eyebrow">Tampa Bay's #1 Cash Buyer</div>
+        <h1>We'll Buy Your Property. <span>Fast.</span></h1>
+        <p>Any condition. Any situation. We make fair cash offers on single family homes and vacant land across Tampa Bay — and we close on your timeline.</p>
+        <div class="btns">
+          <div class="btn-red">Get My Cash Offer →</div>
+          <div class="btn-outline">See Our 96 Deals</div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="proof">
+          <div class="proof-item">
+            <div class="big">96</div>
+            <div class="sm">Deals Closed</div>
+          </div>
+          <div class="proof-item">
+            <div class="big">24hr</div>
+            <div class="sm">Offer in 24 Hours</div>
+          </div>
+          <div class="proof-item">
+            <div class="big">$0</div>
+            <div class="sm">Zero Fees</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="trust-bar">
+      <div class="trust-item">No repairs needed</div>
+      <div class="trust-item">No agents or commissions</div>
+      <div class="trust-item">Close in as little as 10 days</div>
+      <div class="trust-item">Local Tampa Bay company</div>
+    </div>
+  </div>
+</div>
+
+<!-- DIRECTION C: UPGRADED CURRENT -->
+<div class="direction-label">Direction C <span>Current Vibe, Significantly Upgraded — Navy + Teal</span></div>
+<div class="preview-frame" id="frame-c" onclick="select('c')">
+  <div class="current">
+    <nav>
+      <div class="logo-text">TOP SHELF</div>
+      <div class="nav-links">
+        <a href="#">About</a>
+        <a href="#">What We Buy</a>
+        <a href="#">Portfolio</a>
+        <a href="#" class="nav-cta">Get An Offer</a>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="hero-orb"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Tampa Bay, Florida</div>
+          <h1>We Buy Real Estate <span>With Purpose.</span></h1>
+          <p>Top Shelf Acquisitions specializes in value-add single family homes and vacant land across the Tampa Bay area. Fast closings, fair offers, no hassle.</p>
+          <div class="btns">
+            <div class="btn-teal">Get A Cash Offer</div>
+            <div class="btn-ghost">What We Buy</div>
+          </div>
+        </div>
+        <div class="cards-right">
+          <div class="feat-card">
+            <div class="icon">🏠</div>
+            <h3>Single Family Homes</h3>
+            <p>Value-add properties, distressed sellers, inherited homes & more across Tampa Bay.</p>
+          </div>
+          <div class="feat-card">
+            <div class="icon">🌿</div>
+            <h3>Vacant Land</h3>
+            <p>Infill lots, buildable parcels, rural and suburban tracts with development potential.</p>
+          </div>
+        </div>
+      </div>
+      <div class="stats-bar">
+        <div class="stat"><div class="num">96+</div><div class="lbl">Deals Closed</div></div>
+        <div class="stat"><div class="num">24hr</div><div class="lbl">Offer Timeline</div></div>
+        <div class="stat"><div class="num">$0</div><div class="lbl">Fees or Commissions</div></div>
+        <div class="stat"><div class="num">100%</div><div class="lbl">Cash Buyer</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DIRECTION D: DARK TECH -->
+<div class="direction-label">Direction D <span>Dark Tech — Black + Electric Green</span></div>
+<div class="preview-frame" id="frame-d" onclick="select('d')">
+  <div class="tech">
+    <nav>
+      <div class="logo-text">TSA//</div>
+      <div class="nav-links">
+        <a href="#">about</a>
+        <a href="#">what_we_buy</a>
+        <a href="#">portfolio</a>
+        <a href="#" class="nav-cta">get_offer</a>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="scanlines"></div>
+      <div>
+        <div class="eyebrow"><span>$ </span>location: Tampa Bay, Florida</div>
+        <h1>Your Property.<br/>Our Capital.<br/><span>Done Fast.</span></h1>
+        <p>// No agents. No fees. No repairs needed.<br/>// Cash offers within 24 hours.<br/>// Close on your timeline.</p>
+        <div class="btns">
+          <div class="btn-green">SELL TODAY</div>
+          <div class="btn-ghost">view_portfolio()</div>
+        </div>
+      </div>
+      <div class="terminal">
+        <div class="t-header">TSA_SYSTEM v2.6 — LIVE DATA</div>
+        <div class="t-line"><span class="prompt">→ </span><span class="key">deals_closed: </span><span class="val">96</span></div>
+        <div class="t-line"><span class="prompt">→ </span><span class="key">offer_time: </span><span class="val">&lt; 24 hours</span></div>
+        <div class="t-line"><span class="prompt">→ </span><span class="key">agent_fees: </span><span class="val">$0.00</span></div>
+        <div class="t-line"><span class="prompt">→ </span><span class="key">repair_required: </span><span class="val">false</span></div>
+        <div class="t-line"><span class="prompt">→ </span><span class="key">market: </span><span class="val">Hillsborough, Pinellas, Pasco, Polk</span></div>
+        <div class="t-line"><span class="prompt">→ </span><span class="key">status: </span><span class="val" style="color:#00ff88;">ACTIVELY_BUYING</span></div>
+      </div>
+      <div style="grid-column: 1/-1;">
+        <div class="data-bar">
+          <div class="data-item"><div class="num">SFR</div><div class="lbl">Single Family</div></div>
+          <div class="data-item"><div class="num">LAND</div><div class="lbl">Vacant Lots</div></div>
+          <div class="data-item"><div class="num">CASH</div><div class="lbl">All-Cash Buyer</div></div>
+          <div class="data-item"><div class="num">FAST</div><div class="lbl">Your Timeline</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-note">Scroll up to compare. Tell me which direction (A, B, C, or D) you want — or describe what you like/dislike from each.</div>
+
+<script>
+let selected = null;
+function select(choice) {
+  ['a','b','c','d'].forEach(c => {
+    document.getElementById('frame-' + c).classList.remove('selected');
+  });
+  selected = choice;
+  document.getElementById('frame-' + choice).classList.add('selected');
+  // Send to superpowers events if available
+  if (window.__sp_recordEvent) window.__sp_recordEvent({type:'click', choice, text: 'Direction ' + choice.toUpperCase()});
+}
+</script>
+</body>
+</html>
