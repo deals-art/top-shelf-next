@@ -220,12 +220,13 @@ h3 {
 .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--teal); }
 .hero-content h1 {
   font-family: var(--font-display);
-  font-size: clamp(42px, 5.5vw, 72px);
-  font-weight: 300;
-  line-height: 1.08;
-  letter-spacing: 2px;
+  font-size: clamp(48px, 7vw, 104px);
+  font-weight: 200;
+  line-height: 0.98;
+  letter-spacing: -1.5px;
   margin-bottom: 24px;
 }
+.hero-content h1 .teal { font-style: italic; }
 .hero-sub {
   font-size: clamp(15px, 1.5vw, 17px);
   color: var(--text-secondary);
@@ -427,33 +428,102 @@ h3 {
   padding: var(--section-pad) 0;
   background: var(--bg-mid);
 }
-.ba-image-wrap {
-  margin-top: 48px;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  box-shadow: 0 40px 100px rgba(0,0,0,0.5);
-  position: relative;
+.ba-subhead {
+  color: var(--text-secondary);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 12px auto 0;
+  line-height: 1.6;
 }
-.ba-image-wrap img {
+.ba-rooms {
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+  margin-top: 80px;
+}
+.ba-pair-header {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.ba-pair-num {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--teal);
+  letter-spacing: 3px;
+}
+.ba-pair-name {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 34px;
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+.ba-pair-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(93,214,219,0.6), transparent);
+  transform-origin: left;
+  min-width: 100px;
+}
+.ba-pair-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  align-items: center;
+}
+.ba-arrow {
+  padding: 0 18px;
+  color: var(--teal);
+  font-size: 28px;
+}
+.ba-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-mid);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+.ba-card img {
   width: 100%;
-  height: auto;
+  height: 110%;
+  object-fit: cover;
   display: block;
 }
-.ba-label {
+.ba-card-vignette {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(6,13,26,0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 8px 16px;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--teal);
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.35), transparent 40%);
+  pointer-events: none;
+}
+.ba-card-label {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  padding: 7px 16px;
+  border-radius: 99px;
+  font-size: 11px;
   letter-spacing: 2px;
+  font-weight: 600;
   text-transform: uppercase;
+}
+.ba-card-label.is-after {
+  background: rgba(93,214,219,0.92);
+  color: #000;
+}
+@media (max-width: 768px) {
+  .ba-pair-grid { grid-template-columns: 1fr; gap: 16px; }
+  .ba-arrow { display: none; }
+  .ba-pair-name { font-size: 26px; }
+  .ba-rooms { gap: 70px; }
 }
 
 /* ===== PORTFOLIO ===== */
