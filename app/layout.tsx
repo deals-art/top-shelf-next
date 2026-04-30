@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display, Pinyon_Script, Josefin_Sans } from 'next/font/google'
+import { Inter, Playfair_Display, Satisfy, Josefin_Sans } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
   display: 'swap',
 })
 
-const script = Pinyon_Script({
+const script = Satisfy({
   subsets: ['latin'],
   variable: '--font-script',
   weight: ['400'],
