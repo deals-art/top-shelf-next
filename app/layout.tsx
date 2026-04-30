@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display, Pinyon_Script } from 'next/font/google'
+import { Inter, Playfair_Display, Pinyon_Script, Josefin_Sans } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
@@ -23,6 +23,13 @@ const script = Pinyon_Script({
   display: 'swap',
 })
 
+const josefin = Josefin_Sans({
+  subsets: ['latin'],
+  variable: '--font-futura',
+  weight: ['300', '400', '600', '700'],
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   title: 'Top Shelf Acquisitions | Tampa Bay Real Estate Investments',
   description: 'Top Shelf Acquisitions buys single family homes and vacant land across the Tampa Bay area. Fast closings, fair cash offers, no hassle.',
@@ -30,7 +37,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} ${script.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${script.variable} ${josefin.variable}`}>
       <body>{children}</body>
     </html>
   )

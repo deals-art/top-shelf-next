@@ -12,6 +12,7 @@
   --border-hover: rgba(93, 214, 219, 0.28);
   --font-sans: var(--font-inter), 'Inter', sans-serif;
   --font-serif: var(--font-playfair), 'Playfair Display', serif;
+  --font-display: var(--font-futura), 'Josefin Sans', sans-serif;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --section-pad: clamp(80px, 10vw, 140px);
   --container: 1180px;
@@ -86,11 +87,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   flex-shrink: 0;
 }
 h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(32px, 4vw, 52px);
   font-weight: 700;
   line-height: 1.08;
-  letter-spacing: -0.5px;
+  letter-spacing: 0.5px;
 }
 h3 {
   font-family: var(--font-sans);
@@ -129,7 +130,7 @@ h3 {
 .logo-wordmark { display: flex; flex-direction: column; align-items: center; gap: 0; line-height: 1; }
 .logo-script { font-family: var(--font-script); font-size: 42px; color: #fff; line-height: 1.05; white-space: nowrap; }
 .logo-rule { display: block; width: 90%; height: 1px; background: linear-gradient(90deg, transparent, var(--teal), transparent); margin: 3px 0 5px; }
-.logo-sub { font-family: var(--font-inter); font-weight: 300; font-size: 7.5px; color: var(--teal); letter-spacing: 0.45em; text-transform: uppercase; text-align: center; }
+.logo-sub { font-family: var(--font-display); font-weight: 300; font-size: 7px; color: var(--teal); letter-spacing: 0.5em; text-transform: uppercase; text-align: center; }
 .nav-links {
   display: flex;
   align-items: center;
@@ -218,11 +219,11 @@ h3 {
 }
 .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--teal); }
 .hero-content h1 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(42px, 5.5vw, 72px);
   font-weight: 700;
-  line-height: 1.04;
-  letter-spacing: -1px;
+  line-height: 1.08;
+  letter-spacing: 1px;
   margin-bottom: 24px;
 }
 .hero-sub {
@@ -559,7 +560,7 @@ footer {
 .footer-logo { display: flex; flex-direction: column; align-items: center; gap: 0; }
 .footer-logo-script { font-family: var(--font-script); font-size: 48px; color: #fff; line-height: 1.05; }
 .footer-logo-rule { display: block; width: 80%; height: 1px; background: linear-gradient(90deg, transparent, var(--teal), transparent); margin: 2px 0 5px; }
-.footer-logo-sub { font-family: var(--font-inter); font-weight: 300; font-size: 8px; color: var(--teal); letter-spacing: 0.45em; text-transform: uppercase; }
+.footer-logo-sub { font-family: var(--font-display); font-weight: 300; font-size: 8px; color: var(--teal); letter-spacing: 0.5em; text-transform: uppercase; }
 .footer-tagline { font-size: 13px; color: var(--text-muted); letter-spacing: 0.5px; }
 .footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); }
 
