@@ -22,7 +22,7 @@ export default function Navbar() {
         <ul className="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#what-we-buy">What We Buy</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#portfolio">Track Record</a></li>
           <li><a href="#contact" className="nav-cta">Get An Offer</a></li>
         </ul>
         <button className="hamburger" aria-label="Toggle menu" onClick={() => setMobileOpen(v => !v)}>
@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className={`mobile-menu${mobileOpen ? ' open' : ''}`}>
         <a href="#about" onClick={close}>About</a>
         <a href="#what-we-buy" onClick={close}>What We Buy</a>
-        <a href="#portfolio" onClick={close}>Portfolio</a>
+        <a href="#portfolio" onClick={close}>Track Record</a>
         <a href="#contact" onClick={close}>Get An Offer</a>
       </div>
     </nav>

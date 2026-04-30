@@ -41,7 +41,7 @@ export default function Portfolio() {
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7, ease }}
         >
-          <p className="section-eyebrow">Our Portfolio</p>
+          <p className="section-eyebrow">Our Track Record</p>
           <h2>Deals Closed Across Tampa Bay</h2>
         </motion.div>
       </div>
