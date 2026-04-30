@@ -52,11 +52,11 @@ export const deals: Deal[] = [
   {
     "address": "7950 52nd St N, Pinellas Park, FL 33781",
     "date": "06/05/2023",
-    "lat": 27.8441897,
-    "lng": -82.704192
+    "lat": 27.8441884,
+    "lng": -82.7041885
   },
   {
-    "address": "8606 N Semmes St, Tampa, FL 33604",
+    "address": "8606 N Semmes St Unit A, Tampa, FL 33604",
     "date": "08/01/2023",
     "lat": 28.028140152235,
     "lng": -82.442188501444
@@ -64,26 +64,26 @@ export const deals: Deal[] = [
   {
     "address": "429 Burgundy I, Delray Beach, FL 33484",
     "date": "09/29/2023",
-    "lat": 26.443384038398,
-    "lng": -80.132201333197
+    "lat": 26.443151899815,
+    "lng": -80.132188400919
   },
   {
     "address": "5311 10th St N, St Petersburg, FL 33703",
     "date": "10/05/2023",
-    "lat": 27.8201544,
-    "lng": -82.6479995
+    "lat": 27.8201564,
+    "lng": -82.6480026
   },
   {
     "address": "6733 81st Ave N, Pinellas Park, FL 33781",
     "date": "10/26/2023",
-    "lat": 27.8456304,
-    "lng": -82.6919306
+    "lat": 27.8457842,
+    "lng": -82.71346
   },
   {
     "address": "1806 7th Ave W, Bradenton, FL 34205",
     "date": "11/22/2023",
-    "lat": 27.4937799,
-    "lng": -82.579589
+    "lat": 27.4937809,
+    "lng": -82.579593
   },
   {
     "address": "3817 Buckeye Cir, Sarasota, FL 34232",
@@ -94,38 +94,38 @@ export const deals: Deal[] = [
   {
     "address": "1915 E Ellicott St, Tampa, FL 33610",
     "date": "12/07/2023",
-    "lat": 27.9908571,
-    "lng": -82.4388367
+    "lat": 27.9908581,
+    "lng": -82.4388399
   },
   {
-    "address": "1004 27th Ave W, Bradenton, FL 34205",
+    "address": "1004 27th Ave W Unit A & B, Bradenton, FL 34205",
     "date": "01/17/2024",
-    "lat": 27.4761588,
-    "lng": -82.5721737
+    "lat": 27.476133156365,
+    "lng": -82.572188067239
   },
   {
     "address": "3616 Lindell Ave, Tampa, FL 33610",
     "date": "01/30/2024",
-    "lat": 27.9801678,
-    "lng": -82.4196854
+    "lat": 27.9801698,
+    "lng": -82.4196894
   },
   {
-    "address": "4151 Oakfield Ave, Holiday, FL 34691",
+    "address": "4151 Oakfield Ave, Holiday, FL 34691, Usa",
     "date": "02/08/2024",
-    "lat": 28.210968282917,
-    "lng": -82.746055056787
+    "lat": 28.210951759949,
+    "lng": -82.745995573198
   },
   {
     "address": "6108 Oak Ridge Ave, New Port Richey, FL 34653",
     "date": "03/22/2024",
-    "lat": 28.2412348,
-    "lng": -82.7137059
+    "lat": 28.2412361,
+    "lng": -82.7137087
   },
   {
-    "address": "4004 36th Avenue Dr W, Bradenton, FL 34205",
+    "address": "4004 36th Avenue Dr W #4004, Bradenton, FL 34205",
     "date": "03/01/2024",
-    "lat": 27.46962,
-    "lng": -82.6016868
+    "lat": 27.469595530691,
+    "lng": -82.601666959855
   },
   {
     "address": "3008 Newtown Blvd, Sarasota, FL 34234",
@@ -142,20 +142,20 @@ export const deals: Deal[] = [
   {
     "address": "1205 29th St W, Bradenton, FL 34205",
     "date": "04/22/2024",
-    "lat": 27.4892025,
-    "lng": -82.5905335
+    "lat": 27.4892015,
+    "lng": -82.5905295
   },
   {
     "address": "3910 W Iowa Ave, Tampa, FL 33616",
     "date": "05/22/2024",
-    "lat": 27.8809135,
-    "lng": -82.5090461
+    "lat": 27.8809155,
+    "lng": -82.5090491
   },
   {
-    "address": "811 27th Street Court East, Bradenton, FL 34208",
+    "address": "811 27th Street Court East, Bradenton, FL",
     "date": "05/28/2024",
-    "lat": 27.4923327,
-    "lng": -82.5294907
+    "lat": 27.4923337,
+    "lng": -82.5294947
   },
   {
     "address": "149 Caddy Rd, Rotonda West, FL 33947",
@@ -166,8 +166,8 @@ export const deals: Deal[] = [
   {
     "address": "4800 Turnberry Cir, North Port, FL 34288",
     "date": "05/03/2024",
-    "lat": 27.0441476,
-    "lng": -82.1543845
+    "lat": 27.0441475,
+    "lng": -82.1543806
   },
   {
     "address": "462 NE 71st Ter, Ocala, FL 34470",
@@ -209,31 +209,31 @@ export const deals: Deal[] = [
     "address": "6343 Talbot St, North Port, FL 34287",
     "date": "01/10/2025",
     "lat": 27.040146,
-    "lng": -82.250568
+    "lng": -82.250565
   },
   {
-    "address": "2100 Auburn St S, St Petersburg, FL 33712",
+    "address": "2100 Auburn St S, St. Petersburg, FL 33712",
     "date": "01/14/2025",
-    "lat": 27.7494299,
-    "lng": -82.6697763
+    "lat": 27.7494309,
+    "lng": -82.6697793
   },
   {
     "address": "7377 Royal Palm Dr, New Port Richey, FL 34652",
     "date": "01/31/2025",
-    "lat": 28.2637271,
-    "lng": -82.7290687
+    "lat": 28.2637259,
+    "lng": -82.7290666
   },
   {
     "address": "16214 2nd St E, Redington Beach, FL 33708",
     "date": "02/14/2025",
-    "lat": 27.8125772,
-    "lng": -82.8148899
+    "lat": 27.8125752,
+    "lng": -82.814886
   },
   {
     "address": "3430 Chapel Dr, Sarasota, FL 34234",
     "date": "02/13/2025",
-    "lat": 27.366114,
-    "lng": -82.5540958
+    "lat": 27.3661149,
+    "lng": -82.5540998
   },
   {
     "address": "803 W Woodlawn Ave, Tampa, FL 33603",
@@ -242,13 +242,13 @@ export const deals: Deal[] = [
     "lng": -82.470027
   },
   {
-    "address": "8701 Gulf Blvd, St Pete Beach, FL 33706",
+    "address": "8701 Gulf Blvd, St Pete Beach FL 33706",
     "date": "03/07/2025",
     "lat": 27.7501822,
     "lng": -82.7578486
   },
   {
-    "address": "5745 4th Ave N, St Petersburg, FL 33710",
+    "address": "5745 4th Ave N St. Petersburg, FL 33710",
     "date": "03/07/2025",
     "lat": 27.7755413,
     "lng": -82.7114621
@@ -263,7 +263,7 @@ export const deals: Deal[] = [
     "address": "6572 Mauna Loa Blvd, Sarasota, FL 34241",
     "date": "03/13/2025",
     "lat": 27.2967434,
-    "lng": -82.4403671
+    "lng": -82.4403641
   },
   {
     "address": "3011 W Spruce St, Tampa, FL 33607",
@@ -308,16 +308,16 @@ export const deals: Deal[] = [
     "lng": -82.3134323
   },
   {
-    "address": "1004 E 28th Ave, Tampa, FL 33605",
+    "address": "1004 E 28th Ave, Tampa, Florida, 33605",
     "date": "04/29/2025",
-    "lat": 27.9761,
-    "lng": -82.449157
+    "lat": 27.976102,
+    "lng": -82.44916
   },
   {
-    "address": "5175 23rd Ave N, St Petersburg, FL 33710",
+    "address": "5175 23 Ave N, St Petersburg, FL 33710",
     "date": "05/02/2025",
-    "lat": 27.7927103,
-    "lng": -82.7038197
+    "lat": 27.7718099,
+    "lng": -82.7032117
   },
   {
     "address": "5720 79th Ave N, Pinellas Park, FL 33781",
@@ -334,20 +334,20 @@ export const deals: Deal[] = [
   {
     "address": "2220 Davis St, Tampa, FL 33605",
     "date": "05/23/2025",
-    "lat": 27.9444878,
-    "lng": -82.4339422
+    "lat": 27.9444888,
+    "lng": -82.4339462
   },
   {
     "address": "4107 W Fielder St, Tampa, FL 33611",
     "date": "06/03/2025",
-    "lat": 27.8968026,
-    "lng": -82.5125762
+    "lat": 27.8968036,
+    "lng": -82.5125792
   },
   {
-    "address": "4630 W Euclid Ave, Tampa, FL 33629",
+    "address": "4630 W Euclid Ave, Tampa, FL, 33629",
     "date": "06/11/2025",
-    "lat": 27.908731,
-    "lng": -82.5234915
+    "lat": 27.9087296,
+    "lng": -82.5235044
   },
   {
     "address": "7441 San Moritz Dr, Port Richey, FL 34668",
@@ -374,7 +374,7 @@ export const deals: Deal[] = [
     "lng": -82.524861
   },
   {
-    "address": "13097 120th St, Largo, FL 33778",
+    "address": "13097 120th St, Largo, FL, 33778",
     "date": "07/10/2025",
     "lat": 27.892230720854,
     "lng": -82.804334056486
@@ -434,16 +434,16 @@ export const deals: Deal[] = [
     "lng": -82.63211
   },
   {
-    "address": "7504 S Germer St, Tampa, FL 33616",
+    "address": "7504 S Germer St, Tampa FL 33616",
     "date": "09/30/2025",
-    "lat": 27.858208,
-    "lng": -82.5349469
+    "lat": 27.85821,
+    "lng": -82.5349499
   },
   {
     "address": "4946 Dr Martin Luther King Jr St S, St Petersburg, FL 33705",
     "date": "10/03/2025",
-    "lat": 27.7260650,
-    "lng": -82.6455900
+    "lat": 27.726065,
+    "lng": -82.64559
   },
   {
     "address": "5170 Flamingo Dr, Saint Petersburg, FL 33714",
@@ -474,6 +474,12 @@ export const deals: Deal[] = [
     "date": "10/17/2025",
     "lat": 27.0014993,
     "lng": -82.380088
+  },
+  {
+    "address": "335 80th Ave NE, Saint Petersburg, FL 33702",
+    "date": "11/06/2025",
+    "lat": 27.845353,
+    "lng": -82.6318116
   },
   {
     "address": "2309 21st Ave W, Bradenton, FL 34205",
@@ -518,11 +524,11 @@ export const deals: Deal[] = [
     "lng": -82.2942015
   },
   {
-    "address": "3817 Temple St, Tampa, FL 33619",
+    "address": "3817 & 3819 Temple St, Tampa, FL 33619",
     "date": "02/25/2026",
-    "count": 2,
-    "lat": 27.980031,
-    "lng": -82.4009218
+    "lat": 27.9778495,
+    "lng": -82.401002,
+    "count": 2
   },
   {
     "address": "1609 Council Dr, Sun City Center, FL 33573",
@@ -567,29 +573,23 @@ export const deals: Deal[] = [
     "lng": -82.1215391
   },
   {
-    "address": "6941 SE 110th St, Belleview, FL 34420",
+    "address": "6941 & 6945 SE 110th St, Belleview, FL 34420",
     "date": "04/13/2026",
-    "count": 2,
-    "lat": 29.0623397,
-    "lng": -82.0382275
+    "lat": 29.062318173032,
+    "lng": -82.038178246622,
+    "count": 2
   },
   {
-    "address": "4425 18th Ave S, St Petersburg, FL 33711",
+    "address": "4425 18th Ave S, St. Petersburg, FL 33711",
     "date": "04/17/2026",
-    "lat": 27.7519422,
-    "lng": -82.6984347
+    "lat": 27.7520097,
+    "lng": -82.693388
   },
   {
     "address": "3307 Hickman Ave, Plant City, FL 33563",
     "date": "04/21/2026",
     "lat": 28.0156974,
     "lng": -82.1568992
-  },
-  {
-    "address": "335 80th Ave NE, Saint Petersburg, FL 33702",
-    "date": "11/06/2025",
-    "lat": 27.845353,
-    "lng": -82.6318116
   }
 ];
 

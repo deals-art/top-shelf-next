@@ -1,0 +1,450 @@
+{
+  "5425 Drinkard Dr, New Port Richey, FL 34653": {
+    "lat": 28.2381166,
+    "lng": -82.711118
+  },
+  "6940 17th St N, St Petersburg, FL 33702": {
+    "lat": 27.8349794,
+    "lng": -82.6560888
+  },
+  "11205 N Florence Ave, Tampa, FL 33612": {
+    "lat": 28.050147737818,
+    "lng": -82.454405917113
+  },
+  "3425 24th Cir, Sarasota, FL 34235": {
+    "lat": 27.3578822,
+    "lng": -82.502923
+  },
+  "3815 N 14th St, Tampa, FL 33603": {
+    "lat": 27.9801192,
+    "lng": -82.4438598
+  },
+  "2506 N Avenida Republica De Cuba, Tampa, FL 33605": {
+    "lat": 27.9653584,
+    "lng": -82.4443238
+  },
+  "1740 W Powhatan Ave, Tampa, FL 33603": {
+    "lat": 27.9988649,
+    "lng": -82.4778833
+  },
+  "7950 52nd St N, Pinellas Park, FL 33781": {
+    "lat": 27.8441884,
+    "lng": -82.7041885
+  },
+  "8606 N Semmes St, Tampa, FL 33604": {
+    "lat": 28.028140152235,
+    "lng": -82.442188501444
+  },
+  "429 Burgundy I, Delray Beach, FL 33484": {
+    "lat": 26.443151899815,
+    "lng": -80.132188400919
+  },
+  "5311 10th St N, St Petersburg, FL 33703": {
+    "lat": 27.8201564,
+    "lng": -82.6480026
+  },
+  "6733 81st Ave N, Pinellas Park, FL 33781": {
+    "lat": 27.8457842,
+    "lng": -82.71346
+  },
+  "1806 7th Ave W, Bradenton, FL 34205": {
+    "lat": 27.4937809,
+    "lng": -82.579593
+  },
+  "3817 Buckeye Cir, Sarasota, FL 34232": {
+    "lat": 27.3327539,
+    "lng": -82.4916824
+  },
+  "1915 E Ellicott St, Tampa, FL 33610": {
+    "lat": 27.9908581,
+    "lng": -82.4388399
+  },
+  "1004 27th Ave W, Bradenton, FL 34205": {
+    "lat": 27.4761599,
+    "lng": -82.5721777
+  },
+  "3616 Lindell Ave, Tampa, FL 33610": {
+    "lat": 27.9801698,
+    "lng": -82.4196894
+  },
+  "4151 Oakfield Ave, Holiday, FL 34691": {
+    "lat": 28.210991,
+    "lng": -82.7459923
+  },
+  "6108 Oak Ridge Ave, New Port Richey, FL 34653": {
+    "lat": 28.2412361,
+    "lng": -82.7137087
+  },
+  "4004 36th Avenue Dr W, Bradenton, FL 34205": {
+    "lat": 27.469621,
+    "lng": -82.6016899
+  },
+  "3008 Newtown Blvd, Sarasota, FL 34234": {
+    "lat": 27.3622966,
+    "lng": -82.5240684
+  },
+  "5410 Jersey Ave S, Gulfport, FL 33707": {
+    "lat": 27.7597942,
+    "lng": -82.7067787
+  },
+  "1205 29th St W, Bradenton, FL 34205": {
+    "lat": 27.4892015,
+    "lng": -82.5905295
+  },
+  "3910 W Iowa Ave, Tampa, FL 33616": {
+    "lat": 27.8809155,
+    "lng": -82.5090491
+  },
+  "811 27th Street Court East, Bradenton, FL 34208": {
+    "lat": 27.4923327,
+    "lng": -82.5294907
+  },
+  "149 Caddy Rd, Rotonda West, FL 33947": {
+    "lat": 26.890378377052,
+    "lng": -82.28071066001
+  },
+  "4800 Turnberry Cir, North Port, FL 34288": {
+    "lat": 27.0441475,
+    "lng": -82.1543806
+  },
+  "462 NE 71st Ter, Ocala, FL 34470": {
+    "lat": 29.191383572598,
+    "lng": -82.034306073465
+  },
+  "6941 Dalkeith Ave N, Saint Petersburg, FL 33709": {
+    "lat": 27.827515887248,
+    "lng": -82.733354727758
+  },
+  "112 E Emily St, Tampa, FL 33603": {
+    "lat": 27.9752685,
+    "lng": -82.4606161
+  },
+  "3145 Kingston St, Port Charlotte, FL 33952": {
+    "lat": 26.9842493,
+    "lng": -82.0792698
+  },
+  "1400 Lakeview Rd, Clearwater, FL 33756": {
+    "lat": 27.949869,
+    "lng": -82.77915
+  },
+  "101 Williams Ditch Rd, Cantonment, FL 32533": {
+    "lat": 30.632303714357,
+    "lng": -87.318017271427
+  },
+  "6343 Talbot St, North Port, FL 34287": {
+    "lat": 27.040146,
+    "lng": -82.250565
+  },
+  "2100 Auburn St S, St Petersburg, FL 33712": {
+    "lat": 27.7494299,
+    "lng": -82.6697763
+  },
+  "7377 Royal Palm Dr, New Port Richey, FL 34652": {
+    "lat": 28.2637259,
+    "lng": -82.7290666
+  },
+  "16214 2nd St E, Redington Beach, FL 33708": {
+    "lat": 27.8125752,
+    "lng": -82.814886
+  },
+  "3430 Chapel Dr, Sarasota, FL 34234": {
+    "lat": 27.3661149,
+    "lng": -82.5540998
+  },
+  "803 W Woodlawn Ave, Tampa, FL 33603": {
+    "lat": 27.9764487,
+    "lng": -82.470027
+  },
+  "8701 Gulf Blvd, St Pete Beach, FL 33706": {
+    "lat": 27.7501822,
+    "lng": -82.7578486
+  },
+  "5745 4th Ave N, St Petersburg, FL 33710": {
+    "lat": 27.7755413,
+    "lng": -82.7114621
+  },
+  "2115 W Saint John St, Tampa, FL 33607": {
+    "lat": 27.9645452,
+    "lng": -82.4810166
+  },
+  "6572 Mauna Loa Blvd, Sarasota, FL 34241": {
+    "lat": 27.2967434,
+    "lng": -82.4403641
+  },
+  "3011 W Spruce St, Tampa, FL 33607": {
+    "lat": 27.9595087,
+    "lng": -82.4915036
+  },
+  "1213 W Camellia Dr, Brandon, FL 33510": {
+    "lat": 27.9592157,
+    "lng": -82.2913552
+  },
+  "905 Hart St, Clearwater, FL 33755": {
+    "lat": 27.9699597,
+    "lng": -82.7946917
+  },
+  "4041 52nd Ave N, Saint Petersburg, FL 33714": {
+    "lat": 27.818875,
+    "lng": -82.662103
+  },
+  "2401 16th Ave N, Saint Petersburg, FL 33713": {
+    "lat": 27.787472,
+    "lng": -82.665339
+  },
+  "7013 Symmes Rd, Gibsonton, FL 33534": {
+    "lat": 27.8347976,
+    "lng": -82.3777525
+  },
+  "9948 Skewlee Rd, Thonotosassa, FL 33592": {
+    "lat": 28.050824,
+    "lng": -82.3134323
+  },
+  "1004 E 28th Ave, Tampa, FL 33605": {
+    "lat": 27.9761,
+    "lng": -82.449157
+  },
+  "5175 23rd Ave N, St Petersburg, FL 33710": {
+    "lat": 27.7927083,
+    "lng": -82.7038167
+  },
+  "5720 79th Ave N, Pinellas Park, FL 33781": {
+    "lat": 27.8437266,
+    "lng": -82.725557
+  },
+  "8052 Gabriel Dr, Port Richey, FL 34668": {
+    "lat": 28.274515051344,
+    "lng": -82.702083459362
+  },
+  "2220 Davis St, Tampa, FL 33605": {
+    "lat": 27.9444888,
+    "lng": -82.4339462
+  },
+  "4107 W Fielder St, Tampa, FL 33611": {
+    "lat": 27.8968036,
+    "lng": -82.5125792
+  },
+  "4630 W Euclid Ave, Tampa, FL 33629": {
+    "lat": 27.9087296,
+    "lng": -82.5235044
+  },
+  "7441 San Moritz Dr, Port Richey, FL 34668": {
+    "lat": 28.289113047583,
+    "lng": -82.692111106067
+  },
+  "2505 Hollis Dr, Tampa, FL 33618": {
+    "lat": 28.064122784857,
+    "lng": -82.484147276991
+  },
+  "111 Orangeview Ave, Clearwater, FL 33755": {
+    "lat": 27.9673377,
+    "lng": -82.7782726
+  },
+  "4719 W Wyoming Ave, Tampa, FL 33616": {
+    "lat": 27.882563,
+    "lng": -82.524861
+  },
+  "13097 120th St, Largo, FL 33778": {
+    "lat": 27.892230720854,
+    "lng": -82.804334056486
+  },
+  "601 Park Blvd, Oldsmar, FL 34677": {
+    "lat": 28.032877,
+    "lng": -82.665972
+  },
+  "10418 N Oklawaha Ave, Tampa, FL 33617": {
+    "lat": 28.0446826,
+    "lng": -82.406875
+  },
+  "16103 4th St E, Redington Beach, FL 33708": {
+    "lat": 27.8156325,
+    "lng": -82.8100592
+  },
+  "1607 Stevensons Dr, Clearwater, FL 33755": {
+    "lat": 27.981708,
+    "lng": -82.785221
+  },
+  "1602 3rd Ave W, Palmetto, FL 34221": {
+    "lat": 27.5277649,
+    "lng": -82.565584
+  },
+  "12760 118th St, Seminole, FL 33778": {
+    "lat": 27.8671572,
+    "lng": -82.803088
+  },
+  "8717 91st Ter, Seminole, FL 33777": {
+    "lat": 27.8559501,
+    "lng": -82.7992769
+  },
+  "124 Magnolia Ave, Seffner, FL 33584": {
+    "lat": 27.9841502,
+    "lng": -82.2781243
+  },
+  "300 83rd Ave NE, Saint Petersburg, FL 33702": {
+    "lat": 27.847487,
+    "lng": -82.63211
+  },
+  "7504 S Germer St, Tampa, FL 33616": {
+    "lat": 27.858208,
+    "lng": -82.5349469
+  },
+  "4946 Dr Martin Luther King Jr St S, St Petersburg, FL 33705": {
+    "lat": 27.726065,
+    "lng": -82.64559
+  },
+  "5170 Flamingo Dr, Saint Petersburg, FL 33714": {
+    "lat": 27.818971827409,
+    "lng": -82.69679598333
+  },
+  "4111 W Marietta St, Tampa, FL 33616": {
+    "lat": 27.877040325469,
+    "lng": -82.512846958712
+  },
+  "6544 S West Shore Cir, Tampa, FL 33616": {
+    "lat": 27.87328601305,
+    "lng": -82.523856713776
+  },
+  "335 80th Ave NE, Saint Petersburg, FL 33702": {
+    "lat": 27.845353,
+    "lng": -82.6318116
+  },
+  "1925 Forked Creek Dr, Englewood, FL 34223": {
+    "lat": 27.0014993,
+    "lng": -82.380088
+  },
+  "2309 21st Ave W, Bradenton, FL 34205": {
+    "lat": 27.4808718,
+    "lng": -82.5846656
+  },
+  "2415 25th Ave W, Bradenton, FL 34205": {
+    "lat": 27.4780261,
+    "lng": -82.5862865
+  },
+  "2303 N 47th St, Tampa, FL 33605": {
+    "lat": 27.9643182,
+    "lng": -82.405812
+  },
+  "1806 E Linda St, Plant City, FL 33563": {
+    "lat": 28.0287189,
+    "lng": -82.1068403
+  },
+  "3604 E Lambright St, Tampa, FL 33610": {
+    "lat": 28.006195,
+    "lng": -82.4192541
+  },
+  "7735 Brookridge Dr, Port Richey, FL 34668": {
+    "lat": 28.29179504678,
+    "lng": -82.686022201385
+  },
+  "701 Westwood Ln, Brandon, FL 33511": {
+    "lat": 27.9308002,
+    "lng": -82.2942015
+  },
+  "3817 Temple St, Tampa, FL 33619": {
+    "lat": 27.980031,
+    "lng": -82.4009218
+  },
+  "1609 Council Dr, Sun City Center, FL 33573": {
+    "lat": 27.715679,
+    "lng": -82.357503
+  },
+  "431 Rafael Blvd NE, Saint Petersburg, FL 33704": {
+    "lat": 27.7952533,
+    "lng": -82.6147779
+  },
+  "5905 N Cherokee Ave, Tampa, FL 33604": {
+    "lat": 28.0008161,
+    "lng": -82.4543018
+  },
+  "1001 Carlton St, Clearwater, FL 33755": {
+    "lat": 27.97946,
+    "lng": -82.792403
+  },
+  "1621 N Washington Ave, Clearwater, FL 33755": {
+    "lat": 27.981687,
+    "lng": -82.7907374
+  },
+  "27215 Punta Cabello Ct, Punta Gorda, FL 33983": {
+    "lat": 27.031122398103,
+    "lng": -82.00329634939
+  },
+  "402 E Damon St, Plant City, FL 33563": {
+    "lat": 28.0205838,
+    "lng": -82.1215391
+  },
+  "6941 SE 110th St, Belleview, FL 34420": {
+    "lat": 29.0623397,
+    "lng": -82.0382275
+  },
+  "4425 18th Ave S, St Petersburg, FL 33711": {
+    "lat": 27.7519422,
+    "lng": -82.6984347
+  },
+  "3307 Hickman Ave, Plant City, FL 33563": {
+    "lat": 28.0156974,
+    "lng": -82.1568992
+  },
+  "8606 N Semmes St Unit A, Tampa, FL 33604": {
+    "lat": 28.028140152235,
+    "lng": -82.442188501444
+  },
+  "1004 27th Ave W Unit A & B, Bradenton, FL 34205": {
+    "lat": 27.476133156365,
+    "lng": -82.572188067239
+  },
+  "4151 Oakfield Ave, Holiday, FL 34691, Usa": {
+    "lat": 28.210951759949,
+    "lng": -82.745995573198
+  },
+  "4004 36th Avenue Dr W #4004, Bradenton, FL 34205": {
+    "lat": 27.469595530691,
+    "lng": -82.601666959855
+  },
+  "811 27th Street Court East, Bradenton, FL": {
+    "lat": 27.4923337,
+    "lng": -82.5294947
+  },
+  "2100 Auburn St S, St. Petersburg, FL 33712": {
+    "lat": 27.7494309,
+    "lng": -82.6697793
+  },
+  "8701 Gulf Blvd, St Pete Beach FL 33706": {
+    "lat": 27.7501822,
+    "lng": -82.7578486
+  },
+  "5745 4th Ave N St. Petersburg, FL 33710": {
+    "lat": 27.7755413,
+    "lng": -82.7114621
+  },
+  "1004 E 28th Ave, Tampa, Florida, 33605": {
+    "lat": 27.976102,
+    "lng": -82.44916
+  },
+  "5175 23 Ave N, St Petersburg, FL 33710": {
+    "lat": 27.7718099,
+    "lng": -82.7032117
+  },
+  "4630 W Euclid Ave, Tampa, FL, 33629": {
+    "lat": 27.9087296,
+    "lng": -82.5235044
+  },
+  "13097 120th St, Largo, FL, 33778": {
+    "lat": 27.892230720854,
+    "lng": -82.804334056486
+  },
+  "7504 S Germer St, Tampa FL 33616": {
+    "lat": 27.85821,
+    "lng": -82.5349499
+  },
+  "3817 & 3819 Temple St, Tampa, FL 33619": {
+    "lat": 27.9778495,
+    "lng": -82.401002
+  },
+  "6941 & 6945 SE 110th St, Belleview, FL 34420": {
+    "lat": 29.062318173032,
+    "lng": -82.038178246622
+  },
+  "4425 18th Ave S, St. Petersburg, FL 33711": {
+    "lat": 27.7520097,
+    "lng": -82.693388
+  }
+}
