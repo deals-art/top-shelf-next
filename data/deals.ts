@@ -584,6 +584,12 @@ export const deals: Deal[] = [
     "date": "04/21/2026",
     "lat": 28.0156974,
     "lng": -82.1568992
+  },
+  {
+    "address": "335 80th Ave NE, Saint Petersburg, FL 33702",
+    "date": "11/06/2025",
+    "lat": 27.845353,
+    "lng": -82.6318116
   }
 ];
 
