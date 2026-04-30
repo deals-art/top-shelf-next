@@ -442,8 +442,8 @@ export const deals: Deal[] = [
   {
     "address": "4946 Dr Martin Luther King Jr St S, St Petersburg, FL 33705",
     "date": "10/03/2025",
-    "lat": 27.7549867,
-    "lng": -82.646597
+    "lat": 27.7260650,
+    "lng": -82.6455900
   },
   {
     "address": "5170 Flamingo Dr, Saint Petersburg, FL 33714",
