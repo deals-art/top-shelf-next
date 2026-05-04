@@ -784,15 +784,16 @@ h3 {
   position: absolute;
   top: 20px;
   left: 20px;
-  z-index: 10;
-  background: rgba(6, 13, 26, 0.88);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
+  z-index: 1000;
+  background: #060d1a;
+  border: 1px solid var(--border-hover);
   border-radius: 12px;
   padding: 16px 22px;
   display: flex;
   flex-direction: column;
   gap: 2px;
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6);
+  pointer-events: auto;
 }
 .map-stat-val { font-size: 36px; font-weight: 800; color: var(--teal); line-height: 1; letter-spacing: -1px; }
 .map-stat-lbl { font-size: 11px; color: var(--text-muted); letter-spacing: 0.5px; }
