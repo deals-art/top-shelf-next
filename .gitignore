@@ -5,3 +5,6 @@ node_modules/
 .DS_Store
 tsconfig.tsbuildinfo
 public/before-after-79th-ave/
+.env
+.env.local
+.env*.local
