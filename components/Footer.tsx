@@ -1,3 +1,5 @@
+import Socials from './Socials'
+
 export default function Footer() {
   return (
     <footer>
@@ -6,6 +8,7 @@ export default function Footer() {
           <img src="/logo-script.png" alt="Top Shelf Acquisitions" className="footer-logo-img" />
         </div>
         <p className="footer-tagline">Tampa Bay Real Estate Investments</p>
+        <Socials variant="icons" />
         <p className="footer-copy">&copy; 2026 Top Shelf Acquisitions. All rights reserved.</p>
       </div>
     </footer>

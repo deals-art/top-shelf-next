@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import Socials from './Socials'
 
 const ease = [0.22, 1, 0.36, 1] as const
 
@@ -51,7 +52,10 @@ export default function About() {
 
             <p>I&apos;m also a proud member of a few local masterminds that continue to grow my network and sharpen my problem-solving — helping me better serve every realtor and seller I work with.</p>
 
-            <a href="#contact" className="btn-primary">Send Me a Deal</a>
+            <div className="meet-socials">
+              <p className="meet-socials-label">Connect with me</p>
+              <Socials variant="pills" />
+            </div>
           </motion.div>
         </div>
 
