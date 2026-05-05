@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/:id/:name/:type(s|e)",
+      "destination": "https://media.topshelfacquisitions.com/:id/:name/:type"
+    }
+  ]
+}
