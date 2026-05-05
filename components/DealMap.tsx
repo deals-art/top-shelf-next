@@ -46,7 +46,9 @@ export default function DealMap({ onCountReady }: { onCountReady: (n: number) =>
 
     deals.forEach((deal, i) => {
       if (!deal.lat || !deal.lng) return
-      const mapsUrl = `https://maps.google.com/maps?q=${encodeURIComponent(deal.address)}&output=embed`
+      const publicAddress = deal.address.replace(/^\d+\s+/, '')
+      const displayAddress = publicAddress.replace(/,\s*[A-Z]{2}\s+/, ', ')
+      const mapsUrl = `https://maps.google.com/maps?q=${encodeURIComponent(publicAddress)}&output=embed`
       const marker = L.marker([deal.lat, deal.lng], { icon: makePinIcon(i * 8), riseOnHover: true })
       marker.bindPopup(
         `<div class="deal-popup">
@@ -54,7 +56,7 @@ export default function DealMap({ onCountReady }: { onCountReady: (n: number) =>
             <iframe src="${mapsUrl}" width="100%" height="150" style="border:0;border-radius:8px 8px 0 0;display:block;" loading="lazy" allowfullscreen></iframe>
           </div>
           <div class="popup-body">
-            <div class="popup-address">${deal.address}</div>
+            <div class="popup-address">${displayAddress}</div>
             ${deal.date ? `<div class="popup-date">Closed ${deal.date}</div>` : ''}
           </div>
         </div>`,
