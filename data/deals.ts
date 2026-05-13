@@ -590,6 +590,24 @@ export const deals: Deal[] = [
     "date": "04/21/2026",
     "lat": 28.0156974,
     "lng": -82.1568992
+  },
+  {
+    "address": "1460 Schenley St, Port Charlotte, FL 33952",
+    "date": "05/08/2026",
+    "lat": 27.004541,
+    "lng": -82.07675
+  },
+  {
+    "address": "2419 Ridgeview Dr, Lakeland, FL 33810",
+    "date": "05/12/2026",
+    "lat": 28.137506990651,
+    "lng": -81.997035259054
+  },
+  {
+    "address": "707 E Alabama St, Plant City, FL 33563",
+    "date": "05/12/2026",
+    "lat": 28.0109201,
+    "lng": -82.1187959
   }
 ];
 

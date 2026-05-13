@@ -446,5 +446,17 @@
   "4425 18th Ave S, St. Petersburg, FL 33711": {
     "lat": 27.7520097,
     "lng": -82.693388
+  },
+  "1460 Schenley St, Port Charlotte, FL 33952": {
+    "lat": 27.004541,
+    "lng": -82.07675
+  },
+  "2419 Ridgeview Dr, Lakeland, FL 33810": {
+    "lat": 28.137506990651,
+    "lng": -81.997035259054
+  },
+  "707 E Alabama St, Plant City, FL 33563": {
+    "lat": 28.0109201,
+    "lng": -82.1187959
   }
 }
