@@ -608,6 +608,12 @@ export const deals: Deal[] = [
     "date": "05/12/2026",
     "lat": 28.0109201,
     "lng": -82.1187959
+  },
+  {
+    "address": "4509 W Gray Street, Tampa, FL 33609",
+    "date": "06/01/2026",
+    "lat": 27.9486472,
+    "lng": -82.5203921
   }
 ];
 
