@@ -156,6 +156,18 @@ export default function ContactForm() {
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.75, delay: 0.12, ease }}
         >
+          {/* Honeypot spam trap: hidden from real visitors. Bots tend to
+              tick every field, and Web3Forms rejects any submission where
+              this "botcheck" box is checked. */}
+          <input
+            type="checkbox"
+            name="botcheck"
+            defaultChecked={false}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{ display: 'none' }}
+          />
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="name">Your Name</label>
