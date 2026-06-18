@@ -462,5 +462,9 @@
   "4509 W Gray Street, Tampa, FL 33609": {
     "lat": 27.9486472,
     "lng": -82.5203921
+  },
+  "542 Plumosa Ave, Clearwater, FL 33756": {
+    "lat": 27.9598221,
+    "lng": -82.7654616
   }
 }

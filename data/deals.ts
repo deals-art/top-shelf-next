@@ -614,6 +614,12 @@ export const deals: Deal[] = [
     "date": "06/01/2026",
     "lat": 27.9486472,
     "lng": -82.5203921
+  },
+  {
+    "address": "542 Plumosa Ave, Clearwater, FL 33756",
+    "date": "06/17/2026",
+    "lat": 27.9598221,
+    "lng": -82.7654616
   }
 ];
 
