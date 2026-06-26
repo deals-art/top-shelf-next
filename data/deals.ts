@@ -620,6 +620,12 @@ export const deals: Deal[] = [
     "date": "06/17/2026",
     "lat": 27.9598221,
     "lng": -82.7654616
+  },
+  {
+    "address": "1409 10th Ave E, Bradenton, FL 34208",
+    "date": "06/25/2026",
+    "lat": 27.4904614,
+    "lng": -82.5482198
   }
 ];
 
