@@ -142,8 +142,12 @@ export default function ContactForm() {
               <a href="mailto:info@topshelfacquisitions.com">info@topshelfacquisitions.com</a>
             </div>
             <div className="contact-item">
+              <span className="contact-icon">📞</span>
+              <a href="tel:+12399107746">(239) 910-7746</a>
+            </div>
+            <div className="contact-item">
               <span className="contact-icon">📍</span>
-              <span>Tampa Bay, Florida</span>
+              <span>921 N Central Ave #4111, Tampa, FL 33602</span>
             </div>
           </div>
         </motion.div>
@@ -168,15 +172,9 @@ export default function ContactForm() {
             aria-hidden="true"
             style={{ display: 'none' }}
           />
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="John Smith" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(813) 555-0100" />
-            </div>
+          <div className="form-group">
+            <label htmlFor="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required />
           </div>
           <div className="form-group">
             <label htmlFor="email">Email Address</label>
@@ -212,22 +210,6 @@ export default function ContactForm() {
           <div className="form-group">
             <label htmlFor="message">Tell Us More (Optional)</label>
             <textarea id="message" name="message" rows={4} placeholder="Condition of the property, your situation, timeline..." />
-          </div>
-          <div className="form-consent">
-            <input
-              type="checkbox"
-              id="sms_consent"
-              name="sms_consent"
-              value="Yes — agreed to receive SMS/text messages and calls"
-            />
-            <label htmlFor="sms_consent">
-              By checking this box, I agree to receive text messages and phone calls from Top Shelf
-              Acquisitions LLC at the number provided regarding my property inquiry. Msg &amp; data rates
-              may apply. Message frequency varies. Reply STOP to opt out or HELP for help. Consent is not
-              a condition of any purchase. See our{' '}
-              <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and{' '}
-              <a href="/terms" target="_blank" rel="noopener noreferrer">Terms</a>.
-            </label>
           </div>
           <button
             type="submit"

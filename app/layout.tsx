@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display, Satisfy, Josefin_Sans } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 
 const inter = Inter({
@@ -75,7 +76,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${script.variable} ${josefin.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* GoHighLevel / LeadConnector chat widget — SMS opt-in for A2P compliance */}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6a42d2fd55ef5e641370c869"
+          data-source="WEB_USER"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   )
 }

@@ -9,6 +9,13 @@ export default function Footer() {
         </div>
         <p className="footer-tagline">Tampa Bay Real Estate Investments</p>
         <Socials variant="icons" />
+        <div className="footer-contact">
+          <span>921 N Central Ave #4111, Tampa, FL 33602</span>
+          <span aria-hidden="true">·</span>
+          <a href="tel:+12399107746">(239) 910-7746</a>
+          <span aria-hidden="true">·</span>
+          <a href="mailto:info@topshelfacquisitions.com">info@topshelfacquisitions.com</a>
+        </div>
         <div className="footer-links">
           <a href="/privacy">Privacy Policy</a>
           <span aria-hidden="true">·</span>
