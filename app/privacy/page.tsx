@@ -64,7 +64,7 @@ export default function PrivacyPage() {
           <br />
           <br />
           <strong style={{ color: 'var(--text-primary)' }}>
-            No mobile information will be shared with third parties or affiliates for marketing or
+            No mobile information will be shared with any third parties for marketing or
             promotional purposes.
           </strong>{' '}
           All other categories of information described in this policy exclude text messaging originator
