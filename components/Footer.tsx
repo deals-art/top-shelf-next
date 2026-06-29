@@ -9,6 +9,11 @@ export default function Footer() {
         </div>
         <p className="footer-tagline">Tampa Bay Real Estate Investments</p>
         <Socials variant="icons" />
+        <div className="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <span aria-hidden="true">·</span>
+          <a href="/terms">Terms</a>
+        </div>
         <p className="footer-copy">&copy; 2026 Top Shelf Acquisitions. All rights reserved.</p>
       </div>
     </footer>

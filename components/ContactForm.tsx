@@ -213,6 +213,22 @@ export default function ContactForm() {
             <label htmlFor="message">Tell Us More (Optional)</label>
             <textarea id="message" name="message" rows={4} placeholder="Condition of the property, your situation, timeline..." />
           </div>
+          <div className="form-consent">
+            <input
+              type="checkbox"
+              id="sms_consent"
+              name="sms_consent"
+              value="Yes — agreed to receive SMS/text messages and calls"
+            />
+            <label htmlFor="sms_consent">
+              By checking this box, I agree to receive text messages and phone calls from Top Shelf
+              Acquisitions LLC at the number provided regarding my property inquiry. Msg &amp; data rates
+              may apply. Message frequency varies. Reply STOP to opt out or HELP for help. Consent is not
+              a condition of any purchase. See our{' '}
+              <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and{' '}
+              <a href="/terms" target="_blank" rel="noopener noreferrer">Terms</a>.
+            </label>
+          </div>
           <button
             type="submit"
             className="btn-primary full-width"

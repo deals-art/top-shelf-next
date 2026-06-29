@@ -2,8 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'TSA Bookkeeper Privacy Policy.',
-  robots: { index: false, follow: false },
+  description: 'Privacy Policy for Top Shelf Acquisitions LLC, including how we handle SMS/text messaging consent.',
 }
 
 export default function PrivacyPage() {
@@ -35,47 +34,68 @@ export default function PrivacyPage() {
           Privacy Policy
         </h1>
         <p style={{ color: 'var(--text-secondary)', fontSize: 14, marginBottom: 40 }}>
-          TSA Bookkeeper · Last updated: May 3, 2026
+          Top Shelf Acquisitions LLC · Last updated: June 29, 2026
         </p>
 
         <Section heading="Overview">
-          TSA Bookkeeper is a private, single-user, locally-installed application used internally by
-          Top Shelf Acquisitions LLC for bookkeeping operations. This policy describes how data is
-          handled.
+          This Privacy Policy explains how Top Shelf Acquisitions LLC (&ldquo;we,&rdquo; &ldquo;us,&rdquo;
+          or &ldquo;our&rdquo;) collects, uses, and protects information you provide through our website,
+          topshelfacquisitions.com. By using our website or submitting information through our contact
+          form, you agree to this policy.
         </Section>
 
-        <Section heading="Data Collected">
-          The application reads transaction data from the user&rsquo;s QuickBooks Online account,
-          including transaction dates, amounts, payees, memos, and category assignments. It does not
-          collect personal data beyond what is already present in the user&rsquo;s own QuickBooks
-          records.
+        <Section heading="Information We Collect">
+          When you submit our contact form, we collect the information you provide, which may include your
+          name, phone number, email address, property address, property type, and any details you share
+          about your situation. We collect this information only when you voluntarily provide it.
         </Section>
 
-        <Section heading="Data Storage">
-          All data is stored locally on the user&rsquo;s macOS computer in a SQLite database. No
-          data is transmitted to or stored on any external server operated by Top Shelf Acquisitions
-          LLC.
+        <Section heading="How We Use Your Information">
+          We use the information you provide to respond to your inquiry, prepare and discuss a potential
+          offer on your property, and communicate with you about your request by phone, text message, or
+          email. We do not sell your personal information.
+        </Section>
+
+        <Section heading="SMS / Text Messaging">
+          If you provide your phone number and consent to receive text messages, we may send you SMS/text
+          messages related to your property inquiry and our services. Message frequency varies. Message and
+          data rates may apply. You can opt out at any time by replying STOP, and you can reply HELP for
+          assistance.
+          <br />
+          <br />
+          <strong style={{ color: 'var(--text-primary)' }}>
+            No mobile information will be shared with third parties or affiliates for marketing or
+            promotional purposes.
+          </strong>{' '}
+          All other categories of information described in this policy exclude text messaging originator
+          opt-in data and consent; this information will not be shared with any third parties.
         </Section>
 
         <Section heading="Third-Party Services">
-          The application sends transaction details (date, amount, payee, memo, category list) to
-          Anthropic, PBC for the purpose of AI-assisted categorization. Anthropic does not use API
-          request data to train models. See Anthropic&rsquo;s privacy policy for details.
-          <br />
-          <br />
-          The application sends and receives transaction data to and from Intuit Inc.&rsquo;s
-          QuickBooks Online API, governed by Intuit&rsquo;s privacy policy.
+          Our website uses third-party services to operate. Contact form submissions are processed by
+          Web3Forms. Our property address field uses the Google Maps Places service, governed by
+          Google&rsquo;s privacy policy. We use GoHighLevel (LeadConnector) to manage communications with
+          you. These providers process data on our behalf and are not authorized to use your information
+          for their own marketing.
         </Section>
 
-        <Section heading="User Rights">
-          The application is operated by and for a single user (the developer/owner). The user has
-          full control over their data and may delete the local database file at any time.
+        <Section heading="Data Sharing">
+          We do not sell, rent, or trade your personal information. We may share information only with the
+          service providers described above for the purpose of operating our business, or when required by
+          law. As stated above, SMS/text messaging opt-in data and consent are never shared with third
+          parties.
+        </Section>
+
+        <Section heading="Your Choices">
+          You may opt out of text messages at any time by replying STOP. You may request that we delete the
+          information you have submitted, or ask any questions about your data, by contacting us using the
+          details below.
         </Section>
 
         <Section heading="Contact">
           For questions regarding this policy, contact{' '}
-          <a href="mailto:deals@topshelfacquisitions.com" style={{ color: 'var(--teal)' }}>
-            deals@topshelfacquisitions.com
+          <a href="mailto:info@topshelfacquisitions.com" style={{ color: 'var(--teal)' }}>
+            info@topshelfacquisitions.com
           </a>
           .
         </Section>
