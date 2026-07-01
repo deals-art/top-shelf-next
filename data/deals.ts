@@ -626,6 +626,12 @@ export const deals: Deal[] = [
     "date": "06/25/2026",
     "lat": 27.4904614,
     "lng": -82.5482198
+  },
+  {
+    "address": "20645 Stewart Rd, Dade City, FL 33523",
+    "date": "06/30/2026",
+    "lat": 28.458918199484,
+    "lng": -82.181915359016
   }
 ];
 
