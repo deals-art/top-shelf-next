@@ -474,5 +474,13 @@
   "20645 Stewart Rd, Dade City, FL 33523": {
     "lat": 28.458918199484,
     "lng": -82.181915359016
+  },
+  "4506 S Cameron Ave, Tampa, FL 33611": {
+    "lat": 27.9003032,
+    "lng": -82.5130209
+  },
+  "228 Crescent Ct E, Bradenton, FL 34208": {
+    "lat": 27.5008696,
+    "lng": -82.5332119
   }
 }

@@ -632,6 +632,18 @@ export const deals: Deal[] = [
     "date": "06/30/2026",
     "lat": 28.458918199484,
     "lng": -82.181915359016
+  },
+  {
+    "address": "4506 S Cameron Ave, Tampa, FL 33611",
+    "date": "07/01/2026",
+    "lat": 27.9003032,
+    "lng": -82.5130209
+  },
+  {
+    "address": "228 Crescent Ct E, Bradenton, FL 34208",
+    "date": "07/01/2026",
+    "lat": 27.5008696,
+    "lng": -82.5332119
   }
 ];
 
