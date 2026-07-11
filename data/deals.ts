@@ -644,6 +644,12 @@ export const deals: Deal[] = [
     "date": "07/01/2026",
     "lat": 27.5008696,
     "lng": -82.5332119
+  },
+  {
+    "address": "3325 Blayton St, Holiday, FL 34690",
+    "date": "07/10/2026",
+    "lat": 28.20752232164,
+    "lng": -82.736272778317
   }
 ];
 
