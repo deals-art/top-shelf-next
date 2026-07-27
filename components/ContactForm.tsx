@@ -142,8 +142,12 @@ export default function ContactForm() {
               <a href="mailto:info@topshelfacquisitions.com">info@topshelfacquisitions.com</a>
             </div>
             <div className="contact-item">
+              <span className="contact-icon">📞</span>
+              <a href="tel:+12399107746">(239) 910-7746</a>
+            </div>
+            <div className="contact-item">
               <span className="contact-icon">📍</span>
-              <span>Tampa, FL</span>
+              <span>921 N Central Ave #4111, Tampa, FL 33602</span>
             </div>
           </div>
         </motion.div>
