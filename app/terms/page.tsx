@@ -50,9 +50,10 @@ export default function TermsPage() {
         </Section>
 
         <Section heading="SMS / Text Messaging Terms">
-          By providing your phone number and checking the consent box on our contact form, you agree to
-          receive text messages and phone calls from Top Shelf Acquisitions LLC regarding your property
-          inquiry and our services.
+          By providing your phone number through the chat widget on this website and giving your consent
+          there, you agree to receive text messages and phone calls from Top Shelf Acquisitions LLC
+          regarding your property inquiry and our services. The chat widget is the only place on this
+          website where we collect phone numbers and SMS consent.
           <br />
           <br />
           <strong style={{ color: 'var(--text-primary)' }}>Message frequency varies.</strong> Message and
