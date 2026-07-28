@@ -50,9 +50,8 @@ export default function PrivacyPage() {
           situation. The contact form does not collect phone numbers.
           <br />
           <br />
-          When you start a conversation in the chat widget on this website, we collect your name and phone
-          number along with the details you share. The chat widget is the only place on this website where
-          we collect phone numbers and consent to receive text messages. We collect all of this information
+          If you contact us by phone, text message, or another channel outside this website, we may also
+          collect your phone number and the details you share with us. We collect all of this information
           only when you voluntarily provide it.
         </Section>
 
@@ -63,8 +62,8 @@ export default function PrivacyPage() {
         </Section>
 
         <Section heading="SMS / Text Messaging">
-          If you provide your phone number and consent to receive text messages through our chat widget, we
-          may send you SMS/text messages related to your property inquiry and our services. Message frequency varies. Message and
+          If you provide your phone number and consent to receive text messages, we may send you SMS/text
+          messages related to your property inquiry and our services. Message frequency varies. Message and
           data rates may apply. You can opt out at any time by replying STOP, and you can reply HELP for
           assistance.
           <br />
