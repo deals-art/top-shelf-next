@@ -177,6 +177,18 @@ export default function ContactForm() {
             <input type="email" id="email" name="email" placeholder="you@email.com" required />
           </div>
           <div className="form-group">
+            <label htmlFor="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              inputMode="tel"
+              autoComplete="tel"
+              placeholder="(813) 555-0123"
+              required
+            />
+          </div>
+          <div className="form-group">
             <label htmlFor="address">Property Address</label>
             <div ref={placeContainerRef} className="place-autocomplete-wrap" aria-label="Property address autocomplete" />
             {!autocompleteReady && (
