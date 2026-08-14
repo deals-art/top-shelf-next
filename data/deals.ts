@@ -668,6 +668,13 @@ export const deals: Deal[] = [
     "date": "07/31/2026",
     "lat": 27.9694036,
     "lng": -82.3974212
+  },
+  {
+    "address": "3817 & 3819 Temple St, Tampa, FL 33619",
+    "date": "08/13/2026",
+    "lat": 27.9778495,
+    "lng": -82.401002,
+    "count": 2
   }
 ];
 
