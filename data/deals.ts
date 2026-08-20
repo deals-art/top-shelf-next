@@ -675,6 +675,12 @@ export const deals: Deal[] = [
     "lat": 27.9778495,
     "lng": -82.401002,
     "count": 2
+  },
+  {
+    "address": "2307 7th St E, Bradenton, FL 34208.",
+    "date": "08/19/2026",
+    "lat": 27.4786855,
+    "lng": -82.556747
   }
 ];
 
