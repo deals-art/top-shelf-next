@@ -23,11 +23,20 @@ export default function DealMap({ onCountReady }: { onCountReady: (n: number) =>
     mapRef.current = map
 
     L.control.zoom({ position: 'bottomright' }).addTo(map)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
-      subdomains: 'abcd',
-      maxZoom: 19,
-    }).addTo(map)
+    // CARTO watermarks keyless basemap tiles ("API KEY REQUIRED"). The key is
+    // domain-scoped and ships in the client bundle, so it lives in an env var
+    // rather than in this public repo. Without it the map still renders, just
+    // watermarked, so a missing var degrades instead of breaking the page.
+    const cartoKey = process.env.NEXT_PUBLIC_CARTO_BASEMAP_KEY
+    L.tileLayer(
+      `https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png${cartoKey ? `?key=${cartoKey}` : ''}`,
+      {
+        attribution:
+          '&copy; <a href="https://carto.com/">CARTO</a> | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        subdomains: 'abcd',
+        maxZoom: 19,
+      }
+    ).addTo(map)
 
     const makePinIcon = (delay: number) =>
       L.divIcon({
