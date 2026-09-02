@@ -681,6 +681,12 @@ export const deals: Deal[] = [
     "date": "08/19/2026",
     "lat": 27.4786855,
     "lng": -82.556747
+  },
+  {
+    "address": "1106 N Palm Dr, Plant City, FL 33563",
+    "date": "09/01/2026",
+    "lat": 28.0249481,
+    "lng": -82.1081584
   }
 ];
 
