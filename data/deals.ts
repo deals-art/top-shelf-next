@@ -687,6 +687,12 @@ export const deals: Deal[] = [
     "date": "09/01/2026",
     "lat": 28.0249481,
     "lng": -82.1081584
+  },
+  {
+    "address": "1406 Murillo Loop, Ruskin, FL 33570",
+    "date": "09/08/2026",
+    "lat": 27.7231257,
+    "lng": -82.4161364
   }
 ];
 
