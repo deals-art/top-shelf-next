@@ -699,6 +699,12 @@ export const deals: Deal[] = [
     "date": "09/10/2026",
     "lat": 27.971855,
     "lng": -82.4073733
+  },
+  {
+    "address": "6802 W Adams St, Tampa, FL 33611",
+    "date": "09/11/2026",
+    "lat": 27.8697284,
+    "lng": -82.4958918
   }
 ];
 
