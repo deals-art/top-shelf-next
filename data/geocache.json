@@ -522,5 +522,9 @@
   "7001 61st St N, Pinellas Park, FL 33781": {
     "lat": 27.8361389,
     "lng": -82.7182786
+  },
+  "211 Pearl Ave, Sarasota, FL 34243": {
+    "lat": 27.1256237,
+    "lng": -82.4284698
   }
 }
