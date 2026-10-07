@@ -48,19 +48,7 @@ function sleep(ms) {
 }
 
 async function geocode(address) {
-  // Try Nominatim first
-  try {
-    const q = encodeURIComponent(address)
-    const body = await fetchUrl(
-      `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=us`
-    )
-    const results = JSON.parse(body)
-    if (results.length) return { lat: parseFloat(results[0].lat), lng: parseFloat(results[0].lon) }
-  } catch (_) {}
-
-  await sleep(500)
-
-  // Fallback: Census Bureau
+  // Try Census Bureau first: it matches the exact house number and zip
   try {
     const q = encodeURIComponent(address)
     const body = await fetchUrl(
@@ -71,6 +59,18 @@ async function geocode(address) {
     if (matches.length) {
       return { lat: parseFloat(matches[0].coordinates.y), lng: parseFloat(matches[0].coordinates.x) }
     }
+  } catch (_) {}
+
+  await sleep(500)
+
+  // Fallback: Nominatim (free-text search; can return a same-named street in another town)
+  try {
+    const q = encodeURIComponent(address)
+    const body = await fetchUrl(
+      `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=us`
+    )
+    const results = JSON.parse(body)
+    if (results.length) return { lat: parseFloat(results[0].lat), lng: parseFloat(results[0].lon) }
   } catch (_) {}
 
   return null

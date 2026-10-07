@@ -715,8 +715,8 @@ export const deals: Deal[] = [
   {
     "address": "211 Pearl Ave, Sarasota, FL 34243",
     "date": "10/01/2026",
-    "lat": 27.1256237,
-    "lng": -82.4284698
+    "lat": 27.4106362,
+    "lng": -82.5737938
   }
 ];
 
