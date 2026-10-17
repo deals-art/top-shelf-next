@@ -717,6 +717,12 @@ export const deals: Deal[] = [
     "date": "10/01/2026",
     "lat": 27.4106362,
     "lng": -82.5737938
+  },
+  {
+    "address": "803 W Country Club Dr, Tampa, FL 33612",
+    "date": "10/16/2026",
+    "lat": 28.054725640543,
+    "lng": -82.46564306651
   }
 ];
 

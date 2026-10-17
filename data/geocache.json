@@ -526,5 +526,9 @@
   "211 Pearl Ave, Sarasota, FL 34243": {
     "lat": 27.4106362,
     "lng": -82.5737938
+  },
+  "803 W Country Club Dr, Tampa, FL 33612": {
+    "lat": 28.054725640543,
+    "lng": -82.46564306651
   }
 }
