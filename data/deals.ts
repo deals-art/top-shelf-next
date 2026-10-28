@@ -723,6 +723,12 @@ export const deals: Deal[] = [
     "date": "10/16/2026",
     "lat": 28.054725640543,
     "lng": -82.46564306651
+  },
+  {
+    "address": "138 Francis Dr NE, Port Charlotte, FL 33952",
+    "date": "10/27/2026",
+    "lat": 26.971254321185,
+    "lng": -82.097215083779
   }
 ];
 
