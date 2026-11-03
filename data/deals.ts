@@ -729,6 +729,18 @@ export const deals: Deal[] = [
     "date": "10/27/2026",
     "lat": 26.971254321185,
     "lng": -82.097215083779
+  },
+  {
+    "address": "4312 S Hale Ave, Tampa, FL 33611",
+    "date": "10/30/2026",
+    "lat": 27.903828638764,
+    "lng": -82.511440628395
+  },
+  {
+    "address": "826 Scenic Heights Dr, Brandon, FL 33511",
+    "date": "11/02/2026",
+    "lat": 27.885961469184,
+    "lng": -82.295138663699
   }
 ];
 

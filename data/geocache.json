@@ -534,5 +534,13 @@
   "138 Francis Dr NE, Port Charlotte, FL 33952": {
     "lat": 26.971254321185,
     "lng": -82.097215083779
+  },
+  "4312 S Hale Ave, Tampa, FL 33611": {
+    "lat": 27.903828638764,
+    "lng": -82.511440628395
+  },
+  "826 Scenic Heights Dr, Brandon, FL 33511": {
+    "lat": 27.885961469184,
+    "lng": -82.295138663699
   }
 }
