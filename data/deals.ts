@@ -725,6 +725,12 @@ export const deals: Deal[] = [
     "lng": -82.46564306651
   },
   {
+    "address": "3403 E 9th Ave, Tampa, FL 33605",
+    "date": "10/20/2026",
+    "lat": 27.96159652802,
+    "lng": -82.422278959014
+  },
+  {
     "address": "138 Francis Dr NE, Port Charlotte, FL 33952",
     "date": "10/27/2026",
     "lat": 26.971254321185,
